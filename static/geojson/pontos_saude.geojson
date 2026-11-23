@@ -1,0 +1,1338 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "titulo": "Mapeamento de Riscos Geo-Hidrológicos - Unidades de Saúde",
+    "municipio": "Santa Maria de Jetibá - ES",
+    "orgao": "COMPDEC - Defesa Civil Municipal",
+    "total_unidades": 34,
+    "versao": "1.0"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.7450399400181,
+          -20.0217220928244
+        ]
+      },
+      "properties": {
+        "id": 1,
+        "codigo": "Nº 01 / 34",
+        "nome": "Almoxarifado central da prefeitura",
+        "tipo": "Saúde",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (<50m)",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO",
+          "diagnostico": "Distância: 24.7m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "PRÓXIMO",
+          "diagnostico": "Distância: 39.8m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.7419043486604,
+          -19.9973536056042
+        ]
+      },
+      "properties": {
+        "id": 2,
+        "codigo": "Nº 02 / 34",
+        "nome": "Garagem Municipal",
+        "tipo": "Saúde",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (<50m)",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "PRÓXIMO",
+          "diagnostico": "05 anos, 10 Anos, 20 Anos, 25 Anos, 30 Anos, 50 Anos, 100 Anos | Distância: 5m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO",
+          "diagnostico": "Distância: 17m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.737893,
+          -20.081802
+        ]
+      },
+      "properties": {
+        "id": 3,
+        "codigo": "Nº 03 / 34",
+        "nome": "USF - AUGUSTA KUSTER LEMKE - RIO DAS PEDRAS",
+        "tipo": "Saúde",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (<50m)",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO",
+          "diagnostico": "Distância: 46.3m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "PRÓXIMO",
+          "diagnostico": "Distância: 29.7m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.682061,
+          -20.100391
+        ]
+      },
+      "properties": {
+        "id": 4,
+        "codigo": "Nº 04 / 34",
+        "nome": "USF - ANTONIO ABRAHÃO EMILIO LAURETTE - CARAMURU",
+        "tipo": "Saúde",
+        "style": "style_isento",
+        "classificacao": "ISENTO DE RISCO MAPEADO",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "FORA",
+          "diagnostico": "Fora de mancha de inundação",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.799038,
+          -20.012266
+        ]
+      },
+      "properties": {
+        "id": 5,
+        "codigo": "Nº 05 / 34",
+        "nome": "USF-LINDOLPHO KURTH - ALTO SÃO SEBASTIÃO",
+        "tipo": "Saúde",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (<50m)",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO",
+          "diagnostico": "Distância: 15.7m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "PRÓXIMO",
+          "diagnostico": "Distância: 33.6m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.792062,
+          -20.103238
+        ]
+      },
+      "properties": {
+        "id": 6,
+        "codigo": "Nº 06 / 34",
+        "nome": "USF - RICARDO ALBERTO GUILHERME ROSS - BARRA DO RIO CLARO",
+        "tipo": "Saúde",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (<50m)",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO",
+          "diagnostico": "Distância: 6.8m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.831375,
+          -20.111641
+        ]
+      },
+      "properties": {
+        "id": 7,
+        "codigo": "Nº 07 / 34",
+        "nome": "USF - TATIANA FRIEDRICH SAAGER - ALTO SANTA MARIA",
+        "tipo": "Saúde",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Distância: 0m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.887522,
+          -20.155066
+        ]
+      },
+      "properties": {
+        "id": 8,
+        "codigo": "Nº 08 / 34",
+        "nome": "USF - DÓRIO GONÇALVES - GARRAFÃO/RIO LAMEGO",
+        "tipo": "Saúde",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Distância: 0m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "PRÓXIMO",
+          "diagnostico": "Distância: 48.8m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.945191,
+          -20.152117
+        ]
+      },
+      "properties": {
+        "id": 9,
+        "codigo": "Nº 09 / 34",
+        "nome": "USF - ISAACK HERMANN JOÃO LAUVERS - SÃO JOÃO DO GARRAFÃO",
+        "tipo": "Saúde",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Distância: 0m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.750437,
+          -20.030061
+        ]
+      },
+      "properties": {
+        "id": 10,
+        "codigo": "Nº 10 / 34",
+        "nome": "CENTRO DE ATENÇÃO PSICOSSOCIAL - CAPS I",
+        "tipo": "Saúde",
+        "style": "style_isento",
+        "classificacao": "ISENTO DE RISCO MAPEADO",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "FORA",
+          "diagnostico": "Fora de mancha de inundação",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.742471,
+          -20.031467
+        ]
+      },
+      "properties": {
+        "id": 11,
+        "codigo": "Nº 11 / 34",
+        "nome": "Secretaria Municipal de Saúde",
+        "tipo": "Saúde",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Distância: 0m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.742482,
+          -20.031567
+        ]
+      },
+      "properties": {
+        "id": 12,
+        "codigo": "Nº 12 / 34",
+        "nome": "Vigilância Sanitária",
+        "tipo": "Saúde",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "PRÓXIMO",
+          "diagnostico": "Patio da Prefeitura de SMJ - Rua Dalmácio Espíndula | Distância: 44.5m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Distância: 0m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.742097,
+          -20.03223
+        ]
+      },
+      "properties": {
+        "id": 13,
+        "codigo": "Nº 13 / 34",
+        "nome": "Serviço Social da Saúde",
+        "tipo": "Saúde",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "DENTRO",
+          "diagnostico": "Patio da Prefeitura de SMJ - Rua Dalmácio Espíndula | Distância: 0m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO",
+          "diagnostico": "Distância: 28.9m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "PRÓXIMO",
+          "diagnostico": "Distância: 34.6m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.741763,
+          -20.032242
+        ]
+      },
+      "properties": {
+        "id": 14,
+        "codigo": "Nº 14 / 34",
+        "nome": "Farmácia Básica Municipal",
+        "tipo": "Saúde",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "DENTRO",
+          "diagnostico": "Patio da Prefeitura de SMJ - Rua Dalmácio Espíndula | Distância: 0m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO",
+          "diagnostico": "Distância: 10.4m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.750134,
+          -20.030299
+        ]
+      },
+      "properties": {
+        "id": 15,
+        "codigo": "Nº 15 / 34",
+        "nome": "Farmácia de Alto Custo",
+        "tipo": "Saúde",
+        "style": "style_isento",
+        "classificacao": "ISENTO DE RISCO MAPEADO",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "FORA",
+          "diagnostico": "Fora de mancha de inundação",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.74161,
+          -20.032235
+        ]
+      },
+      "properties": {
+        "id": 16,
+        "codigo": "Nº 16 / 34",
+        "nome": "Sala de Imunização",
+        "tipo": "Saúde",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (<50m)",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "PRÓXIMO",
+          "diagnostico": "Patio da Prefeitura de SMJ - Rua Dalmácio Espíndula | Distância: 16.2m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO",
+          "diagnostico": "Distância: 0.9m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.74998,
+          -20.030228
+        ]
+      },
+      "properties": {
+        "id": 17,
+        "codigo": "Nº 17 / 34",
+        "nome": "CENTRO MUNICIPAL DE ESPECIALIDADES",
+        "tipo": "Saúde",
+        "style": "style_isento",
+        "classificacao": "ISENTO DE RISCO MAPEADO",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "FORA",
+          "diagnostico": "Fora de mancha de inundação",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.741934,
+          -19.999205
+        ]
+      },
+      "properties": {
+        "id": 18,
+        "codigo": "Nº 18 / 34",
+        "nome": "USF - FREDERICA JALKEL JACOB - SÃO LUIZ",
+        "tipo": "Saúde",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "PRÓXIMO",
+          "diagnostico": "05 anos, 10 Anos, 20 Anos, 25 Anos, 30 Anos, 50 Anos, 100 Anos | Distância: 22.4m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Distância: 0m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.752354,
+          -20.01763
+        ]
+      },
+      "properties": {
+        "id": 19,
+        "codigo": "Nº 19 / 34",
+        "nome": "USF - MAURILIO PANSINI - VILA NOVA/VILA JETIBA",
+        "tipo": "Saúde",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (<50m)",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "PRÓXIMO",
+          "diagnostico": "05 anos, 10 Anos, 20 Anos, 25 Anos, 30 Anos, 50 Anos, 100 Anos | Distância: 17.5m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO",
+          "diagnostico": "Distância: 10.6m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.717898,
+          -20.048302
+        ]
+      },
+      "properties": {
+        "id": 20,
+        "codigo": "Nº 20 / 34",
+        "nome": "USF - CARLOS AUGUSTO JOÃO FOESCH - SÃO SEBASTIÃO DE BELÉM",
+        "tipo": "Saúde",
+        "style": "style_isento",
+        "classificacao": "ISENTO DE RISCO MAPEADO",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "FORA",
+          "diagnostico": "Fora de mancha de inundação",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.68461,
+          -20.0221
+        ]
+      },
+      "properties": {
+        "id": 21,
+        "codigo": "Nº 21 / 34",
+        "nome": "USF - ANNA NITZ THOM - RECREIO",
+        "tipo": "Saúde",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Distância: 0m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.840505,
+          -20.067284
+        ]
+      },
+      "properties": {
+        "id": 22,
+        "codigo": "Nº 22 / 34",
+        "nome": "USF - PASTOR VITÓRIO KRAUSER - ALTO RIO POSSMOSER",
+        "tipo": "Saúde",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "DENTRO",
+          "diagnostico": "Distrito de Rio Possmoser - Rodovia ES-264 | Distância: 0m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Distância: 0m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.741703,
+          -20.032053
+        ]
+      },
+      "properties": {
+        "id": 23,
+        "codigo": "Nº 23 / 34",
+        "nome": "Hospital Evangélico de Santa Maria de Jetibá",
+        "tipo": "Saúde",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "PRÓXIMO",
+          "diagnostico": "Patio da Prefeitura de SMJ - Rua Dalmácio Espíndula | Distância: 14.6m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Distância: 0m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.741677,
+          -20.032279
+        ]
+      },
+      "properties": {
+        "id": 24,
+        "codigo": "Nº 24 / 34",
+        "nome": "USF SEDE 1",
+        "tipo": "Saúde",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (<50m)",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "PRÓXIMO",
+          "diagnostico": "Patio da Prefeitura de SMJ - Rua Dalmácio Espíndula | Distância: 9.6m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO",
+          "diagnostico": "Distância: 8.8m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.741936,
+          -20.032322
+        ]
+      },
+      "properties": {
+        "id": 25,
+        "codigo": "Nº 25 / 34",
+        "nome": "USF SEDE 2",
+        "tipo": "Saúde",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "DENTRO",
+          "diagnostico": "Patio da Prefeitura de SMJ - Rua Dalmácio Espíndula | Distância: 0m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO",
+          "diagnostico": "Distância: 27.8m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "PRÓXIMO",
+          "diagnostico": "Distância: 36.4m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.741754,
+          -20.032315
+        ]
+      },
+      "properties": {
+        "id": 26,
+        "codigo": "Nº 26 / 34",
+        "nome": "POLICLÍNICA [AMA]",
+        "tipo": "Saúde",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (<50m)",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "PRÓXIMO",
+          "diagnostico": "Patio da Prefeitura de SMJ - Rua Dalmácio Espíndula | Distância: 1.9m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO",
+          "diagnostico": "Distância: 16.5m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "PRÓXIMO",
+          "diagnostico": "Distância: 47.7m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.742125,
+          -20.032166
+        ]
+      },
+      "properties": {
+        "id": 27,
+        "codigo": "Nº 27 / 34",
+        "nome": "CENTRO DE DIAGNÓSTICO ORTOPÉDICO (CDO)",
+        "tipo": "Saúde",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "DENTRO",
+          "diagnostico": "Patio da Prefeitura de SMJ - Rua Dalmácio Espíndula | Distância: 0m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO",
+          "diagnostico": "Distância: 24.7m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "PRÓXIMO",
+          "diagnostico": "Distância: 38.4m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.740124,
+          -20.033604
+        ]
+      },
+      "properties": {
+        "id": 28,
+        "codigo": "Nº 28 / 34",
+        "nome": "VIGILÂNCIA AMBIENTAL EM SAÚDE",
+        "tipo": "Saúde",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (<50m)",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "PRÓXIMO",
+          "diagnostico": "Processo Geológico | Distância: 35.4m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "PRÓXIMO",
+          "diagnostico": "05 anos, 10 Anos, 20 Anos, 25 Anos, 30 Anos, 50 Anos, 100 Anos | Distância: 44.2m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO",
+          "diagnostico": "Distância: 32.7m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "PRÓXIMO",
+          "diagnostico": "Distância: 16.8m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.709083,
+          -20.021621
+        ]
+      },
+      "properties": {
+        "id": 29,
+        "codigo": "Nº 29 / 34",
+        "nome": "US SANTA LUZIA",
+        "tipo": "Saúde",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Distância: 0m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.744057,
+          -20.02708
+        ]
+      },
+      "properties": {
+        "id": 30,
+        "codigo": "Nº 30 / 34",
+        "nome": "Base Descentralizada SAMU 192",
+        "tipo": "Saúde",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Distância: 0m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.62688,
+          -20.016497
+        ]
+      },
+      "properties": {
+        "id": 31,
+        "codigo": "Nº 31 / 34",
+        "nome": "US SÃO JOSÉ DO RIO CLARO",
+        "tipo": "Saúde",
+        "style": "style_isento",
+        "classificacao": "ISENTO DE RISCO MAPEADO",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "FORA",
+          "diagnostico": "Fora de mancha de inundação",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.799786,
+          -20.063702
+        ]
+      },
+      "properties": {
+        "id": 32,
+        "codigo": "Nº 32 / 34",
+        "nome": "USF - GERMANO GUILHERME HENRIQUE JASTROW - BARRA DO RIO POSSMOSER",
+        "tipo": "Saúde",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Distância: 0m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.741716,
+          -20.032333
+        ]
+      },
+      "properties": {
+        "id": 33,
+        "codigo": "Nº 33 / 34",
+        "nome": "Vigilância Epidemiológica",
+        "tipo": "Saúde",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (<50m)",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "PRÓXIMO",
+          "diagnostico": "Patio da Prefeitura de SMJ - Rua Dalmácio Espíndula | Distância: 6.3m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO",
+          "diagnostico": "Distância: 15.9m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "PRÓXIMO",
+          "diagnostico": "Distância: 48.1m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.7450706310323,
+          -20.023636878491
+        ]
+      },
+      "properties": {
+        "id": 34,
+        "codigo": "Nº 34 / 34",
+        "nome": "USF - Aninha Holz - Centro 1",
+        "tipo": "Saúde",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Saúde e Apoio",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "PRÓXIMO",
+          "diagnostico": "100 Anos | Distância: 49.8m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Distância: 0m",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    }
+  ]
+}

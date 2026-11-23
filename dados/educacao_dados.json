@@ -1,0 +1,47 @@
+{
+  "tipologia_risco": {
+    "labels": [
+      "Estrutural (Mov. Massa)",
+      "Ambiental (Susc. Inundação)",
+      "Hidrológico",
+      "Geológico"
+    ],
+    "values": [
+      11,
+      48,
+      3,
+      2
+    ],
+    "total": 64
+  },
+  "ocorrencias_tipo": {
+    "labels": [
+      "Deslizamento (Geológico)",
+      "Alagamento (Hidrológico)",
+      "Estrutural (Mov. Massa)",
+      "Suscetível a Inundação"
+    ],
+    "values": [
+      2,
+      3,
+      11,
+      48
+    ]
+  },
+  "top_5_localidades": {
+    "labels": [
+      "Creche Profª Lizete",
+      "Creche Ronald Berger",
+      "CMEI Nilza Coutinho Holz",
+      "CMEI Rayane Luiza Berger",
+      "Escola Alto Rio Triunfo"
+    ],
+    "values": [
+      4,
+      3,
+      2,
+      2,
+      2
+    ]
+  }
+}

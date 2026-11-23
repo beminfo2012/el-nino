@@ -1,0 +1,2469 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "titulo": "Mapeamento de Riscos Geo-Hidrológicos - Escolas Municipais",
+    "municipio": "Santa Maria de Jetibá - ES",
+    "orgao": "COMPDEC - Defesa Civil Municipal",
+    "total_unidades": 63,
+    "versao": "1.0"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.676853,
+          -20.098017
+        ]
+      },
+      "properties": {
+        "id": 1,
+        "codigo": "Nº 01 / 63",
+        "nome": "CMEI Jetibá",
+        "tipo": "Educação",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (< 50m)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO (37.0m)",
+          "diagnostico": "Distância: 37.0m da mancha",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.741749,
+          -19.999241
+        ]
+      },
+      "properties": {
+        "id": 2,
+        "codigo": "Nº 02 / 63",
+        "nome": "CMEI Nilza Coutinho Holz",
+        "tipo": "Educação",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "PRÓXIMO (24.7m)",
+          "diagnostico": "Distância: 24.7m (05 anos)",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Alta Suscetibilidade (Dentro da Mancha)",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.742465,
+          -20.029938
+        ]
+      },
+      "properties": {
+        "id": 3,
+        "codigo": "Nº 03 / 63",
+        "nome": "CMEI Pommern",
+        "tipo": "Educação",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Alta Suscetibilidade (Dentro da Mancha)",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.840099,
+          -20.067
+        ]
+      },
+      "properties": {
+        "id": 4,
+        "codigo": "Nº 04 / 63",
+        "nome": "CMEI Rayane Luiza Berger",
+        "tipo": "Educação",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "DENTRO",
+          "diagnostico": "Distrito de Rio Possmoser - Rodovia ES-264",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Alta Suscetibilidade (Dentro da Mancha)",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.759879,
+          -20.018952
+        ]
+      },
+      "properties": {
+        "id": 5,
+        "codigo": "Nº 05 / 63",
+        "nome": "CMEI Vila de Jetibá",
+        "tipo": "Educação",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Alta Suscetibilidade (Dentro da Mancha)",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.737664,
+          -20.003384
+        ]
+      },
+      "properties": {
+        "id": 6,
+        "codigo": "Nº 06 / 63",
+        "nome": "Creche  Klainekiner Schaul",
+        "tipo": "Educação",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Alta Suscetibilidade (Dentro da Mancha)",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.738941,
+          -20.030394
+        ]
+      },
+      "properties": {
+        "id": 7,
+        "codigo": "Nº 07 / 63",
+        "nome": "Creche Evelina Buss Stinguel",
+        "tipo": "Educação",
+        "style": "style_isento",
+        "classificacao": "ISENTO DE RISCO MAPEADO",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.945254,
+          -20.153759
+        ]
+      },
+      "properties": {
+        "id": 8,
+        "codigo": "Nº 08 / 63",
+        "nome": "Creche Petronela",
+        "tipo": "Educação",
+        "style": "style_isento",
+        "classificacao": "ISENTO DE RISCO MAPEADO",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.740122,
+          -20.033666
+        ]
+      },
+      "properties": {
+        "id": 9,
+        "codigo": "Nº 09 / 63",
+        "nome": "Creche Prof Lizete",
+        "tipo": "Educação",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (< 50m)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "PRÓXIMO (38.0m)",
+          "diagnostico": "Distância: 38.0m (Processo Geol�gico)",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "PRÓXIMO (47.6m)",
+          "diagnostico": "Distância: 47.6m (05 anos)",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO (36.9m)",
+          "diagnostico": "Distância: 36.9m da mancha",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "PRÓXIMO (11.7m)",
+          "diagnostico": "Distância: 11.7m da encosta",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.746535,
+          -20.019682
+        ]
+      },
+      "properties": {
+        "id": 10,
+        "codigo": "Nº 10 / 63",
+        "nome": "Creche Ronald Berger",
+        "tipo": "Educação",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "DENTRO",
+          "diagnostico": "100 Anos",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Alta Suscetibilidade (Dentro da Mancha)",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "PRÓXIMO (22.3m)",
+          "diagnostico": "Distância: 22.3m da encosta",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.758371,
+          -19.978573
+        ]
+      },
+      "properties": {
+        "id": 11,
+        "codigo": "Nº 11 / 63",
+        "nome": "EMUEF Serra do Gelo",
+        "tipo": "Educação",
+        "style": "style_isento",
+        "classificacao": "ISENTO DE RISCO MAPEADO",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.708071,
+          -20.108207
+        ]
+      },
+      "properties": {
+        "id": 12,
+        "codigo": "Nº 12 / 63",
+        "nome": "Escola  João Guilherme Germano Borchadt",
+        "tipo": "Educação",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (< 50m)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO (29.7m)",
+          "diagnostico": "Distância: 29.7m da mancha",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.725535,
+          -20.142644
+        ]
+      },
+      "properties": {
+        "id": 13,
+        "codigo": "Nº 13 / 63",
+        "nome": "Escola Adolfo Pagung",
+        "tipo": "Educação",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Alta Suscetibilidade (Dentro da Mancha)",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.67349,
+          -19.9952
+        ]
+      },
+      "properties": {
+        "id": 14,
+        "codigo": "Nº 14 / 63",
+        "nome": "Escola Adolfo Stange",
+        "tipo": "Educação",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Alta Suscetibilidade (Dentro da Mancha)",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.801631,
+          -20.008804
+        ]
+      },
+      "properties": {
+        "id": 15,
+        "codigo": "Nº 15 / 63",
+        "nome": "Escola Ageniza M. Dobruns",
+        "tipo": "Educação",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Alta Suscetibilidade (Dentro da Mancha)",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.748432,
+          -20.111001
+        ]
+      },
+      "properties": {
+        "id": 16,
+        "codigo": "Nº 16 / 63",
+        "nome": "Escola Alberto Schulz",
+        "tipo": "Educação",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (< 50m)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "PRÓXIMO (30.3m)",
+          "diagnostico": "Distância: 30.3m da encosta",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.688826,
+          -20.056228
+        ]
+      },
+      "properties": {
+        "id": 17,
+        "codigo": "Nº 17 / 63",
+        "nome": "Escola Alcides Pimentel",
+        "tipo": "Educação",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (< 50m)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "PRÓXIMO (31.0m)",
+          "diagnostico": "Distância: 31.0m da encosta",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.709431,
+          -19.993975
+        ]
+      },
+      "properties": {
+        "id": 18,
+        "codigo": "Nº 18 / 63",
+        "nome": "Escola Alto Recreio",
+        "tipo": "Educação",
+        "style": "style_isento",
+        "classificacao": "ISENTO DE RISCO MAPEADO",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.773708,
+          -20.111381
+        ]
+      },
+      "properties": {
+        "id": 19,
+        "codigo": "Nº 19 / 63",
+        "nome": "Escola Alto Rio Triunfo",
+        "tipo": "Educação",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Alta Suscetibilidade (Dentro da Mancha)",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "PRÓXIMO (21.0m)",
+          "diagnostico": "Distância: 21.0m da encosta",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.885182,
+          -20.153187
+        ]
+      },
+      "properties": {
+        "id": 20,
+        "codigo": "Nº 20 / 63",
+        "nome": "Escola Antonio Gonçalves",
+        "tipo": "Educação",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (< 50m)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO (16.6m)",
+          "diagnostico": "Distância: 16.6m da mancha",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.811215,
+          -20.164361
+        ]
+      },
+      "properties": {
+        "id": 21,
+        "codigo": "Nº 21 / 63",
+        "nome": "Escola Arthur Plaster",
+        "tipo": "Educação",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (< 50m)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO (4.2m)",
+          "diagnostico": "Distância: 4.2m da mancha",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "PRÓXIMO (43.8m)",
+          "diagnostico": "Distância: 43.8m da encosta",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.906186,
+          -20.091291
+        ]
+      },
+      "properties": {
+        "id": 22,
+        "codigo": "Nº 22 / 63",
+        "nome": "Escola Baixo Rio Plantoja",
+        "tipo": "Educação",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Alta Suscetibilidade (Dentro da Mancha)",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.889572,
+          -20.059656
+        ]
+      },
+      "properties": {
+        "id": 23,
+        "codigo": "Nº 23 / 63",
+        "nome": "Escola Barracão Rio Possmoser",
+        "tipo": "Educação",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (< 50m)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO (13.5m)",
+          "diagnostico": "Distância: 13.5m da mancha",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.60207,
+          -19.998927
+        ]
+      },
+      "properties": {
+        "id": 24,
+        "codigo": "Nº 24 / 63",
+        "nome": "Escola Cab. Rio Bonito",
+        "tipo": "Educação",
+        "style": "style_isento",
+        "classificacao": "ISENTO DE RISCO MAPEADO",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.912531,
+          -20.1918
+        ]
+      },
+      "properties": {
+        "id": 25,
+        "codigo": "Nº 25 / 63",
+        "nome": "Escola Cab. Rio Lamego",
+        "tipo": "Educação",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (< 50m)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO (35.5m)",
+          "diagnostico": "Distância: 35.5m da mancha",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "PRÓXIMO (46.9m)",
+          "diagnostico": "Distância: 46.9m da encosta",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.88143,
+          -20.071829
+        ]
+      },
+      "properties": {
+        "id": 26,
+        "codigo": "Nº 26 / 63",
+        "nome": "Escola Cab. Rio Possmoser",
+        "tipo": "Educação",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (< 50m)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO (39.2m)",
+          "diagnostico": "Distância: 39.2m da mancha",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.979892,
+          -20.192766
+        ]
+      },
+      "properties": {
+        "id": 27,
+        "codigo": "Nº 27 / 63",
+        "nome": "Escola Cab. Rio Santa Maria",
+        "tipo": "Educação",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (< 50m)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO (24.6m)",
+          "diagnostico": "Distância: 24.6m da mancha",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.821171,
+          -20.143141
+        ]
+      },
+      "properties": {
+        "id": 28,
+        "codigo": "Nº 28 / 63",
+        "nome": "Escola Carlos Zietlow",
+        "tipo": "Educação",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (< 50m)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO (38.9m)",
+          "diagnostico": "Distância: 38.9m da mancha",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "PRÓXIMO (27.6m)",
+          "diagnostico": "Distância: 27.6m da encosta",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -41.01544,
+          -20.13695
+        ]
+      },
+      "properties": {
+        "id": 29,
+        "codigo": "Nº 29 / 63",
+        "nome": "Escola Carlos Zummach",
+        "tipo": "Educação",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (< 50m)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO (24.7m)",
+          "diagnostico": "Distância: 24.7m da mancha",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.913343,
+          -20.121321
+        ]
+      },
+      "properties": {
+        "id": 30,
+        "codigo": "Nº 30 / 63",
+        "nome": "Escola Corrego Simão",
+        "tipo": "Educação",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (< 50m)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO (35.2m)",
+          "diagnostico": "Distância: 35.2m da mancha",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.782451,
+          -20.049491
+        ]
+      },
+      "properties": {
+        "id": 31,
+        "codigo": "Nº 31 / 63",
+        "nome": "Escola Corrego São Sebastião",
+        "tipo": "Educação",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (< 50m)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO (13.7m)",
+          "diagnostico": "Distância: 13.7m da mancha",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.893566,
+          -20.173638
+        ]
+      },
+      "properties": {
+        "id": 32,
+        "codigo": "Nº 32 / 63",
+        "nome": "Escola Dalmacio Espindula",
+        "tipo": "Educação",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (< 50m)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO (11.4m)",
+          "diagnostico": "Distância: 11.4m da mancha",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.843411,
+          -20.066294
+        ]
+      },
+      "properties": {
+        "id": 33,
+        "codigo": "Nº 33 / 63",
+        "nome": "Escola Estadual Alto Rio Possmoser",
+        "tipo": "Educação",
+        "style": "style_isento",
+        "classificacao": "ISENTO DE RISCO MAPEADO",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.67579,
+          -20.096326
+        ]
+      },
+      "properties": {
+        "id": 34,
+        "codigo": "Nº 34 / 63",
+        "nome": "Escola Estadual Frederico Boldt",
+        "tipo": "Educação",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Alta Suscetibilidade (Dentro da Mancha)",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.738355,
+          -20.003317
+        ]
+      },
+      "properties": {
+        "id": 35,
+        "codigo": "Nº 35 / 63",
+        "nome": "Escola Estadual São Luís",
+        "tipo": "Educação",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Alta Suscetibilidade (Dentro da Mancha)",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.837514,
+          -20.111963
+        ]
+      },
+      "properties": {
+        "id": 36,
+        "codigo": "Nº 36 / 63",
+        "nome": "Escola Faz. Emilio Schroeder",
+        "tipo": "Educação",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (< 50m)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO (48.8m)",
+          "diagnostico": "Distância: 48.8m da mancha",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.757878,
+          -20.072272
+        ]
+      },
+      "properties": {
+        "id": 37,
+        "codigo": "Nº 37 / 63",
+        "nome": "Escola Faz. Gustavo Berger",
+        "tipo": "Educação",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Alta Suscetibilidade (Dentro da Mancha)",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.802557,
+          -20.112548
+        ]
+      },
+      "properties": {
+        "id": 38,
+        "codigo": "Nº 38 / 63",
+        "nome": "Escola Faz. Gustavo Rogge",
+        "tipo": "Educação",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (< 50m)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO (24.7m)",
+          "diagnostico": "Distância: 24.7m da mancha",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.73362,
+          -20.170443
+        ]
+      },
+      "properties": {
+        "id": 39,
+        "codigo": "Nº 39 / 63",
+        "nome": "Escola Faz. Schulz",
+        "tipo": "Educação",
+        "style": "style_isento",
+        "classificacao": "ISENTO DE RISCO MAPEADO",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.803198,
+          -19.990655
+        ]
+      },
+      "properties": {
+        "id": 40,
+        "codigo": "Nº 40 / 63",
+        "nome": "Escola Fazenda Kruger",
+        "tipo": "Educação",
+        "style": "style_isento",
+        "classificacao": "ISENTO DE RISCO MAPEADO",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.659487,
+          -20.000363
+        ]
+      },
+      "properties": {
+        "id": 41,
+        "codigo": "Nº 41 / 63",
+        "nome": "Escola Florencio Bausen",
+        "tipo": "Educação",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (< 50m)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO (18.7m)",
+          "diagnostico": "Distância: 18.7m da mancha",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "PRÓXIMO (1.7m)",
+          "diagnostico": "Distância: 1.7m da encosta",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.831024,
+          -20.003567
+        ]
+      },
+      "properties": {
+        "id": 42,
+        "codigo": "Nº 42 / 63",
+        "nome": "Escola Franz Boldt",
+        "tipo": "Educação",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (< 50m)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO (37.7m)",
+          "diagnostico": "Distância: 37.7m da mancha",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.854938,
+          -20.038616
+        ]
+      },
+      "properties": {
+        "id": 43,
+        "codigo": "Nº 43 / 63",
+        "nome": "Escola Franz Schneider",
+        "tipo": "Educação",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Alta Suscetibilidade (Dentro da Mancha)",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.952969,
+          -20.092448
+        ]
+      },
+      "properties": {
+        "id": 44,
+        "codigo": "Nº 44 / 63",
+        "nome": "Escola Frederico Schulz",
+        "tipo": "Educação",
+        "style": "style_isento",
+        "classificacao": "ISENTO DE RISCO MAPEADO",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -41.006699,
+          -20.160533
+        ]
+      },
+      "properties": {
+        "id": 45,
+        "codigo": "Nº 45 / 63",
+        "nome": "Escola Guarino Schiavo",
+        "tipo": "Educação",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (< 50m)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO (37.2m)",
+          "diagnostico": "Distância: 37.2m da mancha",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.712478,
+          -20.04995
+        ]
+      },
+      "properties": {
+        "id": 46,
+        "codigo": "Nº 46 / 63",
+        "nome": "Escola Henrique Frederico Carlos Boldt",
+        "tipo": "Educação",
+        "style": "style_isento",
+        "classificacao": "ISENTO DE RISCO MAPEADO",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.943845,
+          -20.152742
+        ]
+      },
+      "properties": {
+        "id": 47,
+        "codigo": "Nº 47 / 63",
+        "nome": "Escola João Lauvers",
+        "tipo": "Educação",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Alta Suscetibilidade (Dentro da Mancha)",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.800663,
+          -20.064956
+        ]
+      },
+      "properties": {
+        "id": 48,
+        "codigo": "Nº 48 / 63",
+        "nome": "Escola Luiz Potratz",
+        "tipo": "Educação",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (< 50m)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO (21.7m)",
+          "diagnostico": "Distância: 21.7m da mancha",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.68379,
+          -20.022081
+        ]
+      },
+      "properties": {
+        "id": 49,
+        "codigo": "Nº 49 / 63",
+        "nome": "Escola Recreio",
+        "tipo": "Educação",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Alta Suscetibilidade (Dentro da Mancha)",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.772227,
+          -20.14778
+        ]
+      },
+      "properties": {
+        "id": 50,
+        "codigo": "Nº 50 / 63",
+        "nome": "Escola Rio Claro",
+        "tipo": "Educação",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (< 50m)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO (36.2m)",
+          "diagnostico": "Distância: 36.2m da mancha",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.96258,
+          -20.12877
+        ]
+      },
+      "properties": {
+        "id": 51,
+        "codigo": "Nº 51 / 63",
+        "nome": "Escola Rio do Queijo",
+        "tipo": "Educação",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (< 50m)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO (11.2m)",
+          "diagnostico": "Distância: 11.2m da mancha",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.84996,
+          -20.172108
+        ]
+      },
+      "properties": {
+        "id": 52,
+        "codigo": "Nº 52 / 63",
+        "nome": "Escola Rio Lamego",
+        "tipo": "Educação",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (< 50m)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO (1.7m)",
+          "diagnostico": "Distância: 1.7m da mancha",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "PRÓXIMO (26.6m)",
+          "diagnostico": "Distância: 26.6m da encosta",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.943748,
+          -20.122727
+        ]
+      },
+      "properties": {
+        "id": 53,
+        "codigo": "Nº 53 / 63",
+        "nome": "Escola Rio Sabino",
+        "tipo": "Educação",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (< 50m)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO (8.4m)",
+          "diagnostico": "Distância: 8.4m da mancha",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.976309,
+          -20.142753
+        ]
+      },
+      "properties": {
+        "id": 54,
+        "codigo": "Nº 54 / 63",
+        "nome": "Escola Rio Taquara",
+        "tipo": "Educação",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (< 50m)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO (18.6m)",
+          "diagnostico": "Distância: 18.6m da mancha",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -41.004091,
+          -20.124406
+        ]
+      },
+      "properties": {
+        "id": 55,
+        "codigo": "Nº 55 / 63",
+        "nome": "Escola Rio Taquarinha",
+        "tipo": "Educação",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (< 50m)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO (20.5m)",
+          "diagnostico": "Distância: 20.5m da mancha",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.737994,
+          -20.082347
+        ]
+      },
+      "properties": {
+        "id": 56,
+        "codigo": "Nº 56 / 63",
+        "nome": "Escola Rio Triunfo",
+        "tipo": "Educação",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (< 50m)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "PRÓXIMO (17.2m)",
+          "diagnostico": "Distância: 17.2m da encosta",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.708463,
+          -20.020588
+        ]
+      },
+      "properties": {
+        "id": 57,
+        "codigo": "Nº 57 / 63",
+        "nome": "Escola Santa Luzia",
+        "tipo": "Educação",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Alta Suscetibilidade (Dentro da Mancha)",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.626792,
+          -20.016741
+        ]
+      },
+      "properties": {
+        "id": 58,
+        "codigo": "Nº 58 / 63",
+        "nome": "Escola São José do Rio Claro",
+        "tipo": "Educação",
+        "style": "style_isento",
+        "classificacao": "ISENTO DE RISCO MAPEADO",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.793412,
+          -20.016446
+        ]
+      },
+      "properties": {
+        "id": 59,
+        "codigo": "Nº 59 / 63",
+        "nome": "Escola São Sebastião",
+        "tipo": "Educação",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Alta Suscetibilidade (Dentro da Mancha)",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.760696,
+          -20.018951
+        ]
+      },
+      "properties": {
+        "id": 60,
+        "codigo": "Nº 60 / 63",
+        "nome": "Escola Vila de Jetibá",
+        "tipo": "Educação",
+        "style": "style_proximo",
+        "classificacao": "ATENÇÃO PRÓXIMO (< 50m)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "PRÓXIMO (18.7m)",
+          "diagnostico": "Distância: 18.7m da mancha",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.822482,
+          -20.020027
+        ]
+      },
+      "properties": {
+        "id": 61,
+        "codigo": "Nº 61 / 63",
+        "nome": "Escola Vitor Ponath",
+        "tipo": "Educação",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Alta Suscetibilidade (Dentro da Mancha)",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.723517,
+          -20.142657
+        ]
+      },
+      "properties": {
+        "id": 62,
+        "codigo": "Nº 62 / 63",
+        "nome": "IFES Caramuru",
+        "tipo": "Educação",
+        "style": "style_isento",
+        "classificacao": "ISENTO DE RISCO MAPEADO",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -40.739736,
+          -20.00182
+        ]
+      },
+      "properties": {
+        "id": 63,
+        "codigo": "Nº 63 / 63",
+        "nome": "SECEDU",
+        "tipo": "Educação",
+        "style": "style_risco_direto",
+        "classificacao": "RISCO DIRETO (CRÍTICO)",
+        "referencia": "Mapeamento da Rede Municipal de Ensino",
+        "risco_geologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "CPRM / SEDURB"
+        },
+        "risco_hidrologico": {
+          "status": "FORA",
+          "diagnostico": "Nenhum risco no raio de 50m",
+          "fonte": "Modelagem TR 5-100a"
+        },
+        "suscetibilidade_inundacao": {
+          "status": "DENTRO",
+          "diagnostico": "Alta Suscetibilidade (Dentro da Mancha)",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        },
+        "movimento_massa": {
+          "status": "FORA",
+          "diagnostico": "Fora do raio de suscetibilidade",
+          "fonte": "Carta de Suscetibilidade SMJ"
+        }
+      }
+    }
+  ]
+}

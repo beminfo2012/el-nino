@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório Executivo Oficial — Observatório El Niño | COMPDEC SMJ</title>
+    <!-- Favicon Defesa Civil -->
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon-16x16.png') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='apple-touch-icon.png') }}">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #1E3A8A;
+            --primary-dark: #0F172A;
+            --accent: #F59E0B;
+            --ink: #0F172A;
+            --ink-muted: #475569;
+            --border: #CBD5E1;
+            --bg-table-head: #F1F5F9;
+            --bg-zebra: #F8FAFC;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--ink);
+            background-color: #E2E8F0;
+            line-height: 1.45;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* BARRA SUPERIOR DE AÇÕES (NÃO IMPRESSA) */
+        .action-toolbar {
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+            background: #0F172A;
+            border-bottom: 1px solid #1E293B;
+            color: #F8FAFC;
+            padding: 10px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+            gap: 16px;
+        }
+
+        .toolbar-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toolbar-icon {
+            font-size: 1.4rem;
+        }
+
+        .toolbar-text h1 {
+            font-size: 0.92rem;
+            font-weight: 800;
+            color: #F8FAFC;
+            letter-spacing: 0.3px;
+        }
+
+        .toolbar-text p {
+            font-size: 0.72rem;
+            color: #94A3B8;
+        }
+
+        .toolbar-center {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #1E293B;
+            border: 1px solid #334155;
+            padding: 4px 12px;
+            border-radius: 8px;
+        }
+
+        .toolbar-center label {
+            font-size: 0.76rem;
+            font-weight: 700;
+            color: #94A3B8;
+            white-space: nowrap;
+        }
+
+        .select-setor-toolbar {
+            background: transparent;
+            color: #F8FAFC;
+            border: none;
+            outline: none;
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+            padding: 4px 0;
+        }
+
+        .select-setor-toolbar option {
+            background: #0F172A;
+            color: #F8FAFC;
+        }
+
+        .toolbar-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 16px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: none;
+        }
+
+        .btn-print {
+            background: linear-gradient(135deg, #2563EB, #1D4ED8);
+            color: #FFFFFF;
+            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-print:hover {
+            background: linear-gradient(135deg, #1D4ED8, #1E40AF);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.45);
+        }
+
+        .btn-close {
+            background: #334155;
+            color: #F1F5F9;
+            border: 1px solid #475569;
+        }
+
+        .btn-close:hover {
+            background: #475569;
+            color: #FFFFFF;
+            transform: translateY(-1px);
+        }
+
+        /* FOLHA DE RELATÓRIO A4 */
+        .report-page-container {
+            width: 210mm;
+            max-width: 95vw;
+            margin: 20px auto 40px;
+            background: #ffffff;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+            border-radius: 4px;
+            padding: 16mm 16mm 16mm 16mm;
+            box-sizing: border-box;
+        }
+
+        @media screen and (max-width: 768px) {
+            .report-page-container {
+                width: 100% !important;
+                max-width: 100% !important;
+                padding: 12px !important;
+                margin: 10px 0 20px 0 !important;
+            }
+            .action-toolbar {
+                padding: 8px 12px;
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .toolbar-actions {
+                justify-content: space-between;
+                width: 100%;
+            }
+        }
+
+        /* CABEÇALHO INSTITUCIONAL */
+        .official-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 12px;
+            margin-bottom: 14px;
+            position: relative;
+        }
+
+        .official-header::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--accent);
+        }
+
+        .header-logo {
+            height: 72px;
+            max-width: 90px;
+            object-fit: contain;
+        }
+
+        .header-center {
+            text-align: center;
+            flex: 1;
+            padding: 0 14px;
+        }
+
+        .header-city {
+            font-size: 12pt;
+            font-weight: 800;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            margin-bottom: 2px;
+        }
+
+        .header-dept {
+            font-size: 8.5pt;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .header-title-badge {
+            display: inline-block;
+            margin-top: 5px;
+            background: #FEF3C7;
+            color: #92400E;
+            border: 1px solid #FDE68A;
+            padding: 3px 14px;
+            border-radius: 20px;
+            font-size: 8pt;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        /* FAIXA DE METADADOS */
+        .meta-strip {
+            display: grid;
+            grid-template-columns: 1.3fr 1.6fr 1.4fr 1.3fr;
+            gap: 12px;
+            align-items: center;
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-radius: 6px;
+            padding: 6px 12px;
+            font-size: 7.5pt;
+            color: #475569;
+            margin-bottom: 14px;
+        }
+
+        .meta-strip strong {
+            color: #0F172A;
+        }
+
+        /* GRID DE INDICADORES / KPIS */
+        .kpi-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-bottom: 16px;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        .kpi-card {
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-radius: 6px;
+            padding: 9px 10px;
+            text-align: center;
+            border-top: 3px solid #64748B;
+        }
+
+        .kpi-card.blue {
+            border-top-color: #2563EB;
+        }
+
+        .kpi-card.teal {
+            border-top-color: #0D9488;
+        }
+
+        .kpi-card.orange {
+            border-top-color: #EA580C;
+        }
+
+        .kpi-card.red {
+            border-top-color: #DC2626;
+        }
+
+        .kpi-title {
+            font-size: 7.5pt;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #64748B;
+            margin-bottom: 3px;
+        }
+
+        .kpi-val {
+            font-size: 13pt;
+            font-weight: 800;
+            color: #0F172A;
+            line-height: 1.1;
+        }
+
+        .kpi-sub {
+            font-size: 7pt;
+            color: #475569;
+            margin-top: 3px;
+        }
+
+        /* SEÇÕES DO RELATÓRIO */
+        .report-section {
+            margin-bottom: 16px;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #F1F5F9;
+            border-left: 4px solid var(--primary);
+            padding: 5px 10px;
+            margin-bottom: 8px;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .section-header h2 {
+            font-size: 9.5pt;
+            font-weight: 800;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        /* TABELAS MODERNAS */
+        table.report-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 8pt;
+            margin-bottom: 8px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        table.report-table thead {
+            background: #E2E8F0;
+        }
+
+        table.report-table th {
+            padding: 6px 8px;
+            text-align: left;
+            font-weight: 700;
+            color: #1E293B;
+            font-size: 7.5pt;
+            text-transform: uppercase;
+            border-bottom: 1px solid #CBD5E1;
+            border-right: 1px solid #E2E8F0;
+        }
+
+        table.report-table th:last-child {
+            border-right: none;
+        }
+
+        table.report-table td {
+            padding: 5px 8px;
+            color: #1E293B;
+            border-bottom: 1px solid #E2E8F0;
+            border-right: 1px solid #F1F5F9;
+        }
+
+        table.report-table td:last-child {
+            border-right: none;
+        }
+
+        table.report-table tbody tr:nth-child(even) {
+            background-color: var(--bg-zebra);
+        }
+
+        table.report-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* BADGES DE STATUS */
+        .status-badge {
+            display: inline-block;
+            padding: 2px 7px;
+            border-radius: 12px;
+            font-size: 7pt;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .badge-normal,
+        .badge-concluido,
+        .badge-isento {
+            background: #DEF7EC;
+            color: #03543F;
+            border: 1px solid #BCF0DA;
+        }
+
+        .badge-atencao,
+        .badge-proximo,
+        .badge-andamento {
+            background: #FEF08A;
+            color: #854D0E;
+            border: 1px solid #FDE047;
+        }
+
+        .badge-alerta {
+            background: #FFEDD5;
+            color: #9A3412;
+            border: 1px solid #FDBA74;
+        }
+
+        .badge-critico,
+        .badge-direto {
+            background: #FEE2E2;
+            color: #991B1B;
+            border: 1px solid #FCA5A5;
+        }
+
+        /* GRID DE DUAS COLUNAS */
+        .two-cols {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        /* CAIXAS DE DESTAQUE */
+        .highlight-box {
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-radius: 6px;
+            padding: 8px 10px;
+            margin-bottom: 8px;
+        }
+
+        .highlight-title {
+            font-size: 8pt;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* BLOCO DE ASSINATURAS */
+        .signatures-container {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        .sig-block {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #0F172A;
+        }
+
+        .sig-name {
+            font-size: 8.5pt;
+            font-weight: 700;
+            color: #0F172A;
+        }
+
+        .sig-role {
+            font-size: 7.5pt;
+            color: #475569;
+            margin-top: 2px;
+        }
+
+        .sig-municipality {
+            font-size: 7pt;
+            color: #64748B;
+            font-style: italic;
+        }
+
+        /* RODAPÉ INSTITUCIONAL */
+        .report-footer {
+            margin-top: 20px;
+            padding-top: 8px;
+            border-top: 1px solid #E2E8F0;
+            display: flex;
+            justify-content: space-between;
+            font-size: 7pt;
+            color: #94A3B8;
+        }
+
+        /* QUEBRAS DE PÁGINA */
+        .page-break {
+            page-break-before: always;
+            break-before: page;
+            padding-top: 10px;
+        }
+
+        /* REGRAS DE IMPRESSÃO PROFISSIONAL (NATIVE BROWSER PRINT) */
+        @page {
+            size: A4 portrait;
+            margin: 10mm 12mm 12mm 12mm;
+        }
+
+        @media print {
+            body {
+                background: #ffffff !important;
+                color: #000000 !important;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+
+            .report-page-container {
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                box-shadow: none !important;
+                border-radius: 0 !important;
+            }
+
+            .report-section,
+            .kpi-row,
+            .signatures-container,
+            .highlight-box {
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+            }
+
+            .page-break {
+                page-break-before: always !important;
+                break-before: page !important;
+            }
+
+            table.report-table tr {
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+            }
+        }
+    </style>
+    <!-- BARRA DE FERRAMENTAS SUPERIOR (APENAS NA TELA) -->
+    <header class="action-toolbar no-print">
+        <div class="toolbar-info">
+            <span class="toolbar-icon">🏛️</span>
+            <div class="toolbar-text">
+                <h1>Relatório Executivo Oficial • El Niño 2026/2027</h1>
+                <p>Coordenadoria Municipal de Proteção e Defesa Civil (COMPDEC) — Santa Maria de Jetibá / ES</p>
+            </div>
+        </div>
+
+        <div class="toolbar-center">
+            <label for="select-setor-relatorio">Visão do Relatório:</label>
+            <select id="select-setor-relatorio" class="select-setor-toolbar"
+                onchange="filtrarSetorRelatorio(this.value)">
+                <option value="geral">📊 Relatório Geral (Todos os Setores)</option>
+                <option value="sec-clima">⚡ Clima & Rios</option>
+                <option value="sec-cesan">💧 Abastecimento Cesan</option>
+                <option value="sec-secmam">🌳 Meio Ambiente (SECMAM)</option>
+                <option value="sec-incendios">🔥 Incêndios Florestais</option>
+                <option value="sec-drenagem">🛠️ Drenagem Urbana</option>
+                <option value="sec-caixas-secas">🚜 Caixas Secas (Serviços Urbanos)</option>
+                <option value="sec-educacao">🎓 Secretaria de Educação</option>
+                <option value="sec-assistencia">💜 Assistência Social</option>
+                <option value="sec-vigilancia">🏥 Vigilância em Saúde</option>
+                <option value="sec-saude">🏥 Secretaria de Saúde</option>
+            </select>
+        </div>
+
+        <div class="toolbar-actions">
+            <button class="btn-action btn-print" onclick="window.print()" title="Imprimir Relatório ou Salvar em PDF">
+                🖨️ Imprimir / Salvar PDF
+            </button>
+            <button class="btn-action btn-close" onclick="window.close()" title="Fechar esta aba">
+                ✕ Fechar
+            </button>
+        </div>
+    </header>
+
+    <!-- DOCUMENTO PRINCIPAL (A4) -->
+    <main class="report-page-container" id="report-document">
+
+        <!-- CABEÇALHO OFICIAL -->
+        <header class="official-header">
+            <img src="{{ url_for('static', filename='CMGRD.png') }}" alt="Brasão CMGRD" class="header-logo">
+            <div class="header-center">
+                <div class="header-city">Prefeitura Municipal de Santa Maria de Jetibá</div>
+                <div class="header-dept">Coordenadoria Municipal de Proteção e Defesa Civil — COMPDEC</div>
+                <span class="header-title-badge" id="relatorio-header-badge">Relatório Integrado de Monitoramento • El
+                    Niño</span>
+            </div>
+            <img src="{{ url_for('static', filename='logo-defesa-civil.png') }}" alt="Defesa Civil" class="header-logo">
+        </header>
+
+        <!-- FAIXA DE METADADOS -->
+        <div class="meta-strip">
+            <div><strong>Emissão:</strong> {{ data_emissao }} às {{ hora_emissao }}</div>
+            <div><strong>Fonte Operacional:</strong> {{ sync_info.source if sync_info and sync_info.source else 'Google
+                Drive / CICC' }}</div>
+            <div><strong>Documento:</strong> REL-COMPDEC-{{ data_emissao.replace('/', '') }}</div>
+            <div><strong>Vigência:</strong> Plano de Contingência 2026/2027</div>
+        </div>
+
+        <!-- INDICADORES RESUMIDOS (KPIS) -->
+        <div class="kpi-row" id="relatorio-kpi-row">
+            <div class="kpi-card blue" data-setor="sec-clima">
+                <div class="kpi-title">🌡️ Clima Atual</div>
+                <div class="kpi-val">{{ clima.temp if clima and clima.temp else '23.5' }}°C</div>
+                <div class="kpi-sub">Chuva: {{ clima.chuva if clima and clima.chuva else '15' }}% | Vento: {{
+                    clima.vento if clima and clima.vento else '8' }} km/h</div>
+            </div>
+            <div class="kpi-card teal" data-setor="sec-clima">
+                <div class="kpi-title">🌊 Rio Bonito (ANA)</div>
+                <div class="kpi-val">{{ ana.nivel if ana and ana.nivel else '342' }} cm</div>
+                <div class="kpi-sub">Vazão: {{ ana.vazao if ana and ana.vazao else '12.4' }} m³/s | Chuva: {{ ana.chuva
+                    if ana and ana.chuva else '0' }} mm</div>
+            </div>
+            <div class="kpi-card orange" data-setor="sec-cesan">
+                <div class="kpi-title">💧 Abastecimento (Cesan)</div>
+                <div class="kpi-val" style="font-size: 11pt;">
+                    {% if cesan and cesan.timeline_status and cesan.timeline_status|length > 0 %}
+                    {{ cesan.timeline_status[-1] }}
+                    {% else %}
+                    Atenção
+                    {% endif %}
+                </div>
+                <div class="kpi-sub">Alto Rio Possmoser / Córrego Albert</div>
+            </div>
+            <div class="kpi-card red" data-setor="sec-incendios">
+                <div class="kpi-title">🔥 Incêndios & Dengue</div>
+                <div class="kpi-val">
+                    {{ total_focos }} / {{ total_dengue }}
+                </div>
+                <div class="kpi-sub">Focos Ativos / Notificações</div>
+            </div>
+        </div>
+
+        <!-- 1. CLIMA E TELEMETRIA -->
+        <section class="report-section" data-setor="sec-clima">
+            <div class="section-header">
+                <h2>1. Monitoramento Meteorológico & Hidrológico</h2>
+            </div>
+            <div class="two-cols">
+                <div class="highlight-box">
+                    <div class="highlight-title">⛅ Condições de Tempo e Previsão (7 Dias)</div>
+                    <table class="report-table" style="margin-bottom: 0;">
+                        <thead>
+                            <tr>
+                                <th>Dia</th>
+                                <th>Data</th>
+                                <th>Mín</th>
+                                <th>Máx</th>
+                                <th>Chuva</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% if clima and clima.forecast %}
+                            {% for f in clima.forecast %}
+                            <tr>
+                                <td><strong>{{ f.dia }}</strong></td>
+                                <td>{{ f.data }}</td>
+                                <td>{{ f.min }}°C</td>
+                                <td>{{ f.max }}°C</td>
+                                <td>{{ f.chuva }}%</td>
+                            </tr>
+                            {% endfor %}
+                            {% else %}
+                            <tr>
+                                <td>Hoje</td>
+                                <td>{{ data_emissao }}</td>
+                                <td>18°C</td>
+                                <td>28°C</td>
+                                <td>15%</td>
+                            </tr>
+                            <tr>
+                                <td>Amanhã</td>
+                                <td>{{ data_emissao }}</td>
+                                <td>19°C</td>
+                                <td>29°C</td>
+                                <td>20%</td>
+                            </tr>
+                            {% endif %}
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="highlight-box">
+                    <div class="highlight-title">🌊 Telemetria Estação PCH Rio Bonito (Código ANA: 57119000)</div>
+                    <table class="report-table" style="margin-bottom: 0;">
+                        <tbody>
+                            <tr>
+                                <td><strong>Nível Hidrométrico:</strong></td>
+                                <td><strong>{{ ana.nivel if ana and ana.nivel else '342' }} cm</strong> (Normalidade
+                                    Operacional)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Vazão Líquida:</strong></td>
+                                <td>{{ ana.vazao if ana and ana.vazao else '12.4' }} m³/s</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Precipitação Acumulada:</strong></td>
+                                <td>{{ ana.chuva if ana and ana.chuva else '0.0' }} mm</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Data e Hora da Última Leitura:</strong></td>
+                                <td>{{ ana.data_hora if ana and ana.data_hora else data_emissao ~ ' ' ~ hora_emissao }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Situação do Rio Santa Maria da Vitória:</strong></td>
+                                <td><span class="status-badge badge-normal">Monitoramento Contínuo — Sem
+                                        Transbordamento</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. ABASTECIMENTO CESAN -->
+        <section class="report-section" data-setor="sec-cesan">
+            <div class="section-header">
+                <h2>2. Segurança Hídrica e Abastecimento Público (Cesan)</h2>
+            </div>
+            <table class="report-table">
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">Data do Informe</th>
+                        <th style="width: 45%;">Ponto de Monitoramento / Captação</th>
+                        <th style="width: 30%;">Status Operacional</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if cesan and cesan.timeline_labels %}
+                    {% for i in range(cesan.timeline_labels|length) %}
+                    {% set st = cesan.timeline_status[i] if cesan.timeline_status else 'Normal' %}
+                    <tr>
+                        <td><strong>{{ cesan.timeline_labels[i] }}</strong></td>
+                        <td>Alto Rio Possmoser / Córrego Albert</td>
+                        <td>
+                            {% if 'Alerta' in st %}
+                            <span class="status-badge badge-alerta">{{ st }}</span>
+                            {% elif 'Atenção' in st or 'Atencao' in st %}
+                            <span class="status-badge badge-atencao">{{ st }}</span>
+                            {% elif 'Crítico' in st or 'Critico' in st %}
+                            <span class="status-badge badge-critico">{{ st }}</span>
+                            {% else %}
+                            <span class="status-badge badge-normal">{{ st }}</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    {% else %}
+                    <tr>
+                        <td colspan="3" style="text-align: center; color: #64748B;">Nenhum registro localizado.</td>
+                    </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 3. DRENAGEM E OBRAS -->
+        <section class="report-section" data-setor="sec-drenagem">
+            <div class="section-header">
+                <h2>3. Obras de Drenagem e Prevenção de Enchentes</h2>
+            </div>
+            <table class="report-table">
+                <thead>
+                    <tr>
+                        <th style="width: 14%;">Data</th>
+                        <th style="width: 22%;">Tipo de Intervenção</th>
+                        <th style="width: 28%;">Localidade</th>
+                        <th style="width: 16%;">Extensão</th>
+                        <th style="width: 20%;">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if drenagem and drenagem|length > 0 %}
+                    {% for r in drenagem %}
+                    <tr>
+                        <td>{{ r.data }}</td>
+                        <td><strong>{{ r.tipo }}</strong></td>
+                        <td>{{ r.local }}</td>
+                        <td>{{ r.extensao_m }} metros</td>
+                        <td>
+                            {% if 'Conclu' in r.status %}
+                            <span class="status-badge badge-concluido">{{ r.status }}</span>
+                            {% else %}
+                            <span class="status-badge badge-andamento">{{ r.status }}</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    {% else %}
+                    <tr>
+                        <td colspan="5" style="text-align: center; color: #64748B;">Nenhuma intervenção registrada no
+                            período.</td>
+                    </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 3.B CAIXAS SECAS — SERVIÇOS URBANOS -->
+        <section class="report-section" data-setor="sec-caixas-secas">
+            <div class="section-header">
+                <h2>3.B Abertura e Manutenção de Caixas Secas — Serviços Urbanos</h2>
+            </div>
+            <div class="two-cols" style="margin-bottom: 12px;">
+                <div class="highlight-box">
+                    <div class="highlight-title">🚜 Resumo Operacional de Caixas Secas</div>
+                    <table class="report-table" style="margin-bottom: 0;">
+                        <tbody>
+                            <tr>
+                                <td><strong>Total de Caixas Trabalhadas:</strong></td>
+                                <td><strong>{{ caixas_secas.total_caixas if caixas_secas and caixas_secas.total_caixas is defined else 0 }}</strong> unidades</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Abertura / Novas Implantações:</strong></td>
+                                <td>{{ caixas_secas.caixas_abertura if caixas_secas and caixas_secas.caixas_abertura is defined else 0 }} unidades</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Manutenção / Desassoreamento:</strong></td>
+                                <td>{{ caixas_secas.caixas_manutencao if caixas_secas and caixas_secas.caixas_manutencao is defined else 0 }} unidades</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Volume Estimado de Retenção Pluvial:</strong></td>
+                                <td><strong>{{ caixas_secas.volume_total_m3 if caixas_secas and caixas_secas.volume_total_m3 is defined else 0 }} m³</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="highlight-box">
+                    <div class="highlight-title">💧 Conservação de Solo e Água (SEMOSU)</div>
+                    <p style="font-size: 8pt; color: #475569; margin: 0; line-height: 1.4;">
+                        Bacias de infiltração e caixas secas executadas pela Secretaria de Obras e Serviços Urbanos (SEMOSU) em estradas vicinais e encostas rurais de Santa Maria de Jetibá. O programa visa amortecer enxurradas, proteger o leito das estradas e favorecer a recarga do lençol freático durante o período de chuvas e tempestades.
+                    </p>
+                </div>
+            </div>
+            <table class="report-table">
+                <thead>
+                    <tr>
+                        <th style="width: 12%;">Data</th>
+                        <th style="width: 16%;">Tipo de Serviço</th>
+                        <th style="width: 24%;">Localidade / Trecho</th>
+                        <th style="width: 14%; text-align: center;">Qtd. Caixas</th>
+                        <th style="width: 14%; text-align: right;">Volume (m³)</th>
+                        <th style="width: 20%;">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if caixas_secas and caixas_secas.registros and caixas_secas.registros|length > 0 %}
+                    {% for r in caixas_secas.registros %}
+                    <tr>
+                        <td>{{ r.data }}</td>
+                        <td><strong>{{ r.tipo }}</strong></td>
+                        <td>{{ r.local }}{% if r.trecho %} <span style="font-size: 7.5pt; color: #64748B;">({{ r.trecho }})</span>{% endif %}</td>
+                        <td style="text-align: center; font-weight: 700;">{{ r.quantidade }}</td>
+                        <td style="text-align: right;">{{ r.volume_m3 }} m³</td>
+                        <td>
+                            {% if 'Conclu' in r.status %}
+                            <span class="status-badge badge-concluido">{{ r.status }}</span>
+                            {% else %}
+                            <span class="status-badge badge-andamento">{{ r.status }}</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    {% else %}
+                    <tr>
+                        <td colspan="6" style="text-align: center; color: #64748B;">Nenhum registro de caixas secas informado.</td>
+                    </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 4. INCÊNDIOS E QUEIMADAS -->
+        <section class="report-section" data-setor="sec-incendios">
+            <div class="section-header">
+                <h2>4. Prevenção & Combate a Incêndios Florestais (Setorizado)</h2>
+            </div>
+
+            <!-- Resumo Integrado SCBV e CBMES -->
+            <div class="two-cols" style="margin-bottom: 12px;">
+                <div class="highlight-box" style="border-left: 4px solid #EA580C;">
+                    <div class="highlight-title" style="color: #C2410C;">🚒 Bombeiros Voluntários (SCBV)</div>
+                    <table class="report-table" style="margin-bottom: 0;">
+                        <thead>
+                            <tr>
+                                <th>Localidade Atendida</th>
+                                <th style="text-align: right;">Ocorrências</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% if incendios and incendios.scbv and incendios.scbv.locais_labels %}
+                            {% for i in range(incendios.scbv.locais_labels|length) %}
+                            <tr>
+                                <td>{{ incendios.scbv.locais_labels[i] }}</td>
+                                <td style="text-align: right;"><strong>{{ incendios.scbv.locais_dados[i] }}</strong></td>
+                            </tr>
+                            {% endfor %}
+                            {% else %}
+                            <tr>
+                                <td colspan="2" style="text-align:center;">Sem ocorrências SCBV registradas</td>
+                            </tr>
+                            {% endif %}
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="highlight-box" style="border-left: 4px solid #DC2626;">
+                    <div class="highlight-title" style="color: #B91C1C;">🎖️ Corpo de Bombeiros Militar (CBMES 6º Batalhão)</div>
+                    <table class="report-table" style="margin-bottom: 0;">
+                        <thead>
+                            <tr>
+                                <th>Localidade Atendida</th>
+                                <th style="text-align: right;">Ocorrências</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% if incendios and incendios.cbmes and incendios.cbmes.locais_labels %}
+                            {% for i in range(incendios.cbmes.locais_labels|length) %}
+                            <tr>
+                                <td>{{ incendios.cbmes.locais_labels[i] }}</td>
+                                <td style="text-align: right;"><strong>{{ incendios.cbmes.locais_dados[i] }}</strong></td>
+                            </tr>
+                            {% endfor %}
+                            {% else %}
+                            <tr>
+                                <td colspan="2" style="text-align:center;">Sem ocorrências CBMES registradas</td>
+                            </tr>
+                            {% endif %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <div class="highlight-title">📅 Evolução Comparativa Mensal de Combate a Focos</div>
+                <table class="report-table" style="margin-bottom: 0;">
+                    <thead>
+                        <tr>
+                            <th>Mês / Ano</th>
+                            <th style="text-align: center;">Bombeiros Voluntários (SCBV)</th>
+                            <th style="text-align: center;">CBMES (6º Batalhão)</th>
+                            <th style="text-align: right;">Total Integrado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if incendios and incendios.evolucao_labels %}
+                        {% for i in range(incendios.evolucao_labels|length) %}
+                        <tr>
+                            <td><strong>{{ incendios.evolucao_labels[i] }}</strong></td>
+                            <td style="text-align: center; color: #C2410C; font-weight: 700;">
+                                {{ incendios.scbv.evolucao_dados[i] if incendios.scbv and incendios.scbv.evolucao_dados and incendios.scbv.evolucao_dados|length > i else 0 }}
+                            </td>
+                            <td style="text-align: center; color: #B91C1C; font-weight: 700;">
+                                {{ incendios.cbmes.evolucao_dados[i] if incendios.cbmes and incendios.cbmes.evolucao_dados and incendios.cbmes.evolucao_dados|length > i else 0 }}
+                            </td>
+                            <td style="text-align: right;">
+                                <strong>{{ incendios.evolucao_dados[i] }} ocorrências</strong>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        {% else %}
+                        <tr>
+                            <td colspan="4" style="text-align:center;">Sem dados evolutivos</td>
+                        </tr>
+                        {% endif %}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 5a. VIGILÂNCIA EM SAÚDE -->
+        <section class="report-section" data-setor="sec-vigilancia">
+            <div class="section-header">
+                <h2>5. Vigilância em Saúde (Vetorial)</h2>
+            </div>
+            <div class="highlight-box">
+                <div class="highlight-title">🦟 Notificações e LIRAa por Região</div>
+                <table class="report-table" style="margin-bottom: 0;">
+                    <thead>
+                        <tr>
+                            <th>Indicador / Local</th>
+                            <th style="text-align: right;">Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if vigilancia_vetorial and vigilancia_vetorial.casos_local and
+                        vigilancia_vetorial.casos_local.labels %}
+                        {% for i in range(vigilancia_vetorial.casos_local.labels|length) %}
+                        <tr>
+                            <td>Casos — {{ vigilancia_vetorial.casos_local.labels[i] }}</td>
+                            <td style="text-align: right;"><strong>{{ vigilancia_vetorial.casos_local.values[i]
+                                    }}</strong></td>
+                        </tr>
+                        {% endfor %}
+                        {% else %}
+                        <tr>
+                            <td>Índice LIRAa Municipal</td>
+                            <td style="text-align:right;"><strong>1.2% (Alerta)</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Total Notificações</td>
+                            <td style="text-align:right;"><strong>18 casos</strong></td>
+                        </tr>
+                        {% endif %}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 6. ASSISTÊNCIA SOCIAL -->
+        <section class="report-section" data-setor="sec-assistencia">
+            <div class="section-header">
+                <h2>6. Rede Socioassistencial, Vulnerabilidade e Estoque Humanitário</h2>
+            </div>
+
+            <!-- Indicadores da Rede e CadÚnico -->
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 14px;">
+                <div class="highlight-box" style="margin-bottom: 0;">
+                    <div class="highlight-title">📋 Cadastro Único & Extrema Pobreza</div>
+                    <table class="report-table" style="margin-bottom: 0;">
+                        <tbody>
+                            <tr>
+                                <td>Famílias em Extrema Pobreza no CadÚnico</td>
+                                <td style="text-align: right;"><strong style="color: #DC2626;">{{ assistencia_social.kpis.cadunico_extrema_pobreza or 0 }}</strong> famílias</td>
+                            </tr>
+                            <tr>
+                                <td>Famílias Incluídas no Último Mês</td>
+                                <td style="text-align: right;"><strong style="color: #059669;">{{ assistencia_social.kpis.cadunico_novos or 0 }}</strong> famílias</td>
+                            </tr>
+                            <tr>
+                                <td>Total Famílias Referenciadas (CRAS I + II)</td>
+                                <td style="text-align: right;"><strong>{{ assistencia_social.kpis.total_referenciadas or 0 }}</strong> famílias</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="highlight-box" style="margin-bottom: 0;">
+                    <div class="highlight-title">🤝 Atendimento Familiar & Especial (PAIF/PAEFI)</div>
+                    <table class="report-table" style="margin-bottom: 0;">
+                        <tbody>
+                            <tr>
+                                <td>CRAS I (Polo I): Referenciadas / PAIF</td>
+                                <td style="text-align: right;"><strong>{{ assistencia_social.kpis.cras1_referenciadas or 0 }}</strong> / <strong>{{ assistencia_social.kpis.cras1_paif or 0 }}</strong> PAIF</td>
+                            </tr>
+                            <tr>
+                                <td>CRAS II (Polo II): Referenciadas / PAIF</td>
+                                <td style="text-align: right;"><strong>{{ assistencia_social.kpis.cras2_referenciadas or 0 }}</strong> / <strong>{{ assistencia_social.kpis.cras2_paif or 0 }}</strong> PAIF</td>
+                            </tr>
+                            <tr>
+                                <td>CREAS: PAEFI / Abordagem de Rua (mês)</td>
+                                <td style="text-align: right;"><strong>{{ assistencia_social.kpis.creas_paefi or 0 }}</strong> PAEFI / <strong>{{ assistencia_social.kpis.creas_rua or 0 }}</strong> rua</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Matriz de Estoque Humanitário por Unidade e Consolidado -->
+            <div class="highlight-box">
+                <div class="highlight-title">📦 Estoque Estratégico de Insumos e Benefícios Eventuais (Consolidado e por Unidade)</div>
+                <table class="report-table" style="margin-bottom: 0;">
+                    <thead>
+                        <tr>
+                            <th>Insumo / Benefício</th>
+                            <th style="text-align: center; color: #1E40AF;">CRAS I</th>
+                            <th style="text-align: center; color: #047857;">CRAS II</th>
+                            <th style="text-align: center; color: #9F1239;">CREAS</th>
+                            <th style="text-align: center; font-weight: 800; background: #F1F5F9;">Consolidado Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if assistencia_social.estoque_consolidado %}
+                            {% for item in assistencia_social.estoque_consolidado %}
+                            <tr>
+                                <td>{{ item.item }}</td>
+                                <td style="text-align: center; color: #1E40AF;">{{ item.por_unidade.get('CRAS I') if item.por_unidade and item.por_unidade.get('CRAS I') else '—' }}</td>
+                                <td style="text-align: center; color: #047857;">{{ item.por_unidade.get('CRAS II') if item.por_unidade and item.por_unidade.get('CRAS II') else '—' }}</td>
+                                <td style="text-align: center; color: #9F1239;">{{ item.por_unidade.get('CREAS') if item.por_unidade and item.por_unidade.get('CREAS') else '—' }}</td>
+                                <td style="text-align: center;"><strong>{{ item.quantidade }} {{ item.unidade_medida }}</strong></td>
+                            </tr>
+                            {% endfor %}
+                        {% else %}
+                            <tr><td colspan="5" style="text-align: center; color: #64748B;">Nenhum insumo registrado na planilha.</td></tr>
+                        {% endif %}
+                        <tr style="background: #F1F5F9; font-weight: 800; border-top: 2px solid #CBD5E1;">
+                            <td>TOTAL DE INSUMOS EM RESERVA</td>
+                            <td style="text-align: center; color: #1E40AF;">{{ assistencia_social.estoque_totais.cras1 or 0 }}</td>
+                            <td style="text-align: center; color: #047857;">{{ assistencia_social.estoque_totais.cras2 or 0 }}</td>
+                            <td style="text-align: center; color: #9F1239;">{{ assistencia_social.estoque_totais.creas or 0 }}</td>
+                            <td style="text-align: center; color: #0F172A; font-size: 1.05rem;"><strong>{{ assistencia_social.estoque_totais.consolidado or 0 }} itens</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 7. SECMAM MEIO AMBIENTE -->
+        <section class="report-section" data-setor="sec-secmam">
+            <div class="section-header">
+                <h2>7. Secretaria de Meio Ambiente (SECMAM) — Arborização Urbana</h2>
+            </div>
+            <div class="two-cols">
+                <div class="highlight-box">
+                    <div class="highlight-title">🌳 Diagnóstico e Intervenções Arbóreas</div>
+                    <table class="report-table" style="margin-bottom: 0;">
+                        <tbody>
+                            <tr>
+                                <td><strong>Árvores Inventariadas:</strong></td>
+                                <td><strong>{{ secmam.cadastrados if secmam and secmam.cadastrados else '720'
+                                        }}</strong> (666 Ativas | 54 Suprimidas)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Intervenções Programadas:</strong></td>
+                                <td>{{ secmam.intervencoes if secmam and secmam.intervencoes else '198' }} em cronograma
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Risco Elevado e Alto:</strong></td>
+                                <td><span class="status-badge badge-critico">{{ secmam.critico if secmam and
+                                        secmam.critico else '3' }} espécimes (Atendimento Imediato)</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Conflito c/ Fiação EDP:</strong></td>
+                                <td>{{ secmam.eletrica if secmam and secmam.eletrica else '129' }} (92 Direto | 37
+                                    Proximidade)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="highlight-box">
+                    <div class="highlight-title">⚡ Ações de Supressão e Poda Preventiva</div>
+                    <p style="font-size: 8pt; color: #475569;">Programa preventivo de mitigação de riscos de queda de
+                        árvores durante tempestades e vendavais associados ao El Niño 2026/2027.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. MATRIZ DE RISCO ESCOLAS -->
+        <section class="report-section" data-setor="sec-educacao">
+            <div class="section-header">
+                <h2>8. Secretaria de Educação — Matriz de Riscos Físicos</h2>
+            </div>
+            <div class="highlight-box">
+                <div class="highlight-title">🏫 Educação (63 Unidades Escolares Mapeadas)</div>
+                <table class="report-table" style="margin-bottom: 0;">
+                    <thead>
+                        <tr>
+                            <th>Tipologia de Risco</th>
+                            <th style="text-align: right;">Afetadas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if educacao and educacao.tipologia_risco and educacao.tipologia_risco.labels %}
+                        {% for i in range(educacao.tipologia_risco.labels|length) %}
+                        <tr>
+                            <td>{{ educacao.tipologia_risco.labels[i] }}</td>
+                            <td style="text-align: right;"><strong>{{ educacao.tipologia_risco.values[i] }}</strong>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        {% else %}
+                        <tr>
+                            <td>Suscetibilidade a Inundação</td>
+                            <td style="text-align:right;">48</td>
+                        </tr>
+                        <tr>
+                            <td>Movimento de Massa</td>
+                            <td style="text-align:right;">11</td>
+                        </tr>
+                        {% endif %}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 9. MATRIZ DE RISCO SAÚDE -->
+        <section class="report-section" data-setor="sec-saude">
+            <div class="section-header">
+                <h2>9. Secretaria de Saúde — Matriz de Riscos Físicos</h2>
+            </div>
+            <div class="highlight-box">
+                <div class="highlight-title">🏥 Saúde (34 Unidades de Saúde e Apoio)</div>
+                <table class="report-table" style="margin-bottom: 0;">
+                    <thead>
+                        <tr>
+                            <th>Tipologia de Risco</th>
+                            <th style="text-align: right;">Afetadas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if saude and saude.tipologia_risco and saude.tipologia_risco.labels %}
+                        {% for i in range(saude.tipologia_risco.labels|length) %}
+                        <tr>
+                            <td>{{ saude.tipologia_risco.labels[i] }}</td>
+                            <td style="text-align: right;"><strong>{{ saude.tipologia_risco.values[i] }}</strong></td>
+                        </tr>
+                        {% endfor %}
+                        {% else %}
+                        <tr>
+                            <td>Suscetibilidade a Inundação</td>
+                            <td style="text-align:right;">28</td>
+                        </tr>
+                        <tr>
+                            <td>Movimento de Massa</td>
+                            <td style="text-align:right;">10</td>
+                        </tr>
+                        {% endif %}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- ASSINATURAS OFICIAIS -->
+        <div class="signatures-container">
+            <div class="sig-block">
+                <div class="sig-name">Coordenadoria Municipal de Proteção e Defesa Civil</div>
+                <div class="sig-role">COMPDEC — Gestão de Riscos e Desastres</div>
+                <div class="sig-municipality">Santa Maria de Jetibá - ES</div>
+            </div>
+            <div class="sig-block">
+                <div class="sig-name">Comissão Municipal de Gestão do Risco e Desastre</div>
+                <div class="sig-role">CMGRD — Representação Integrada</div>
+                <div class="sig-municipality">Santa Maria de Jetibá - ES</div>
+            </div>
+        </div>
+
+        <!-- RODAPÉ -->
+        <footer class="report-footer">
+            <div>Documento expedido em ambiente digital oficial • Protocolo COMPDEC/SMJ nº {{ data_emissao.replace('/',
+                '') }}-{{ hora_emissao.replace(':', '') }}</div>
+            <div>Operação El Niño 2026/2027 • Santa Maria de Jetibá - ES</div>
+        </footer>
+
+    </main>
+
+    <!-- BIBLIOTECA DE DOWNLOAD DIRETO (HTML2PDF) CONFIGURADA COM ALTA RESOLUÇÃO -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        const sectorTitles = {
+            'geral': 'Relatório Integrado de Monitoramento • El Niño',
+            'sec-clima': 'Relatório Setorizado: Clima & Rios',
+            'sec-cesan': 'Relatório Setorizado: Abastecimento Público (Cesan)',
+            'sec-secmam': 'Relatório Setorizado: Meio Ambiente (SECMAM)',
+            'sec-incendios': 'Relatório Setorizado: Incêndios Florestais',
+            'sec-drenagem': 'Relatório Setorizado: Drenagem Urbana',
+            'sec-caixas-secas': 'Relatório Setorizado: Abertura e Manutenção de Caixas Secas (Serviços Urbanos)',
+            'sec-educacao': 'Relatório Setorizado: Secretaria de Educação',
+            'sec-assistencia': 'Relatório Setorizado: Assistência Social',
+            'sec-vigilancia': 'Relatório Setorizado: Vigilância em Saúde',
+            'sec-saude': 'Relatório Setorizado: Secretaria de Saúde'
+        };
+
+        function filtrarSetorRelatorio(setorId) {
+            const badge = document.getElementById('relatorio-header-badge');
+            const select = document.getElementById('select-setor-relatorio');
+            if (select) select.value = setorId;
+
+            const sections = document.querySelectorAll('.report-section');
+            const kpiCards = document.querySelectorAll('#relatorio-kpi-row .kpi-card');
+
+            if (badge && sectorTitles[setorId]) {
+                badge.innerText = sectorTitles[setorId];
+            }
+
+            sections.forEach(sec => {
+                if (setorId === 'geral' || sec.getAttribute('data-setor') === setorId) {
+                    sec.style.display = 'block';
+                } else {
+                    sec.style.display = 'none';
+                }
+            });
+
+            kpiCards.forEach(card => {
+                if (setorId === 'geral' || card.getAttribute('data-setor') === setorId) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            const url = new URL(window.location);
+            url.searchParams.set('setor', setorId);
+            window.history.replaceState({}, '', url);
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const initialSetor = urlParams.get('setor') || "{{ setor_ativo }}" || 'geral';
+            filtrarSetorRelatorio(initialSetor);
+        });
+    </script>
+    </body>
+
+</html>

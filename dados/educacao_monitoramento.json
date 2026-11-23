@@ -1,0 +1,119 @@
+{
+  "kpis": {
+    "escolas_risco": 9,
+    "escolas_sem_climatizacao": 14,
+    "dias_aula_suspensos": 3,
+    "absenteismo_onda_calor": "8,4%"
+  },
+  "absenteismo_semanas": {
+    "labels": [
+      "SE29",
+      "SE30",
+      "SE31",
+      "SE32",
+      "SE33",
+      "SE34",
+      "SE35",
+      "SE36"
+    ],
+    "values": [
+      4.1,
+      4.6,
+      5.0,
+      4.8,
+      6.2,
+      7.5,
+      7.9,
+      8.4
+    ],
+    "temperaturas": [
+      28.5,
+      29.2,
+      31.0,
+      30.1,
+      32.5,
+      34.2,
+      35.0,
+      36.1
+    ]
+  },
+  "indicadores_complementares": {
+    "reservatorio_insuficiente": 6,
+    "ensino_remoto": 340,
+    "escola_abrigo": 1,
+    "acoes_planejamento": [
+      {
+        "titulo": "Plancon-Escolar (Plano de Contingência)",
+        "descricao": "Protocolos de prevenção, resposta e recuperação",
+        "status": "Em Andamento",
+        "status_class": "badge-andamento"
+      },
+      {
+        "titulo": "Mapeamento de Escolas em Área de Risco",
+        "descricao": "Em articulação com a Defesa Civil",
+        "status": "Concluído",
+        "status_class": "badge-concluido"
+      },
+      {
+        "titulo": "Climatização (Ar-condicionado + Umidade)",
+        "descricao": "Meta: 40-60% de umidade interna",
+        "status": "Pendente",
+        "status_class": "badge-pendente"
+      },
+      {
+        "titulo": "Plano de Ensino Remoto/Híbrido",
+        "descricao": "Para fechamento de unidades",
+        "status": "Concluído",
+        "status_class": "badge-concluido"
+      },
+      {
+        "titulo": "Rotas de Evacuação e Simulados",
+        "descricao": "Escolas em área de risco",
+        "status": "Em Andamento",
+        "status_class": "badge-andamento"
+      }
+    ]
+  },
+  "ocorrencias": [
+    {
+      "data": "20/08",
+      "escola": "EMEF Centro",
+      "motivo": "Onda de Calor",
+      "acao": "Adequação de Horário",
+      "status": "Concluído",
+      "status_class": "badge-concluido"
+    },
+    {
+      "data": "25/08",
+      "escola": "EMEF Rio Posmoser",
+      "motivo": "Alagamento",
+      "acao": "Suspensão de Aula",
+      "status": "Concluído",
+      "status_class": "badge-concluido"
+    },
+    {
+      "data": "01/09",
+      "escola": "EMEF Garrafão",
+      "motivo": "Restrição Hídrica",
+      "acao": "Reforço de Abastecimento",
+      "status": "Em Andamento",
+      "status_class": "badge-andamento"
+    },
+    {
+      "data": "04/09",
+      "escola": "EMEF Alto Santa Maria",
+      "motivo": "Onda de Calor",
+      "acao": "Ensino Remoto/Híbrido",
+      "status": "Em Andamento",
+      "status_class": "badge-andamento"
+    },
+    {
+      "data": "08/09",
+      "escola": "EMEF São Sebastião de Belém",
+      "motivo": "Deslizamento (área risco)",
+      "acao": "Rota de Evacuação — Simulado",
+      "status": "Planejado",
+      "status_class": "badge-planejado"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "timeline_labels": [
+    "27/07",
+    "03/08",
+    "10/08",
+    "17/08",
+    "25/08",
+    "31/08"
+  ],
+  "timeline_values": [
+    0,
+    0,
+    0,
+    2,
+    2,
+    1
+  ],
+  "timeline_status": [
+    "Normal",
+    "Normal",
+    "Normal",
+    "Alerta",
+    "Alerta",
+    "Atenção"
+  ]
+}

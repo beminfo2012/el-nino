@@ -1,0 +1,17 @@
+arquivo_morto
+arquivo_morto/**
+**/arquivo_morto/**
+__pycache__
+__pycache__/**
+*.pyc
+*.pyo
+.git
+.gitignore
+.env*
+.agents
+gerar_planilha.py
+gerar_planilha_usuarios.py
+gerar_usuarios_cpf.py
+*.pdf
+*.rar
+*.zip

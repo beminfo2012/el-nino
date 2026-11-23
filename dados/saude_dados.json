@@ -1,0 +1,47 @@
+{
+  "tipologia_risco": {
+    "labels": [
+      "Estrutural (Mov. Massa)",
+      "Ambiental (Susc. Inundação)",
+      "Hidrológico",
+      "Geológico"
+    ],
+    "values": [
+      10,
+      28,
+      5,
+      12
+    ],
+    "total": 55
+  },
+  "ocorrencias_tipo": {
+    "labels": [
+      "Deslizamento (Geológico)",
+      "Alagamento (Hidrológico)",
+      "Estrutural (Mov. Massa)",
+      "Suscetível a Inundação"
+    ],
+    "values": [
+      12,
+      5,
+      10,
+      28
+    ]
+  },
+  "top_5_localidades": {
+    "labels": [
+      "Vigilância Ambiental em Saúde",
+      "Serviço Social da Saúde",
+      "USF Sede 2",
+      "Policlínica [AMA]",
+      "Centro de Diagnóstico Ortopédico (CDO)"
+    ],
+    "values": [
+      4,
+      3,
+      3,
+      3,
+      3
+    ]
+  }
+}
