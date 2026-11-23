@@ -1080,17 +1080,15 @@
                 </div>
             </div>
 
-            <!-- Matriz de Estoque Humanitário por Unidade e Consolidado -->
+            <!-- Estoque Humanitário Geral -->
             <div class="highlight-box">
-                <div class="highlight-title">📦 Estoque Estratégico de Insumos e Benefícios Eventuais (Consolidado e por Unidade)</div>
+                <div class="highlight-title">📦 Estoque Estratégico Geral de Insumos e Benefícios Eventuais</div>
                 <table class="report-table" style="margin-bottom: 0;">
                     <thead>
                         <tr>
                             <th>Insumo / Benefício</th>
-                            <th style="text-align: center; color: #1E40AF;">CRAS I</th>
-                            <th style="text-align: center; color: #047857;">CRAS II</th>
-                            <th style="text-align: center; color: #9F1239;">CREAS</th>
-                            <th style="text-align: center; font-weight: 800; background: #F1F5F9;">Consolidado Total</th>
+                            <th style="text-align: center; font-weight: 800; background: #F1F5F9;">Quantidade Total</th>
+                            <th style="text-align: center;">Status Geral</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -1098,21 +1096,17 @@
                             {% for item in assistencia_social.estoque_consolidado %}
                             <tr>
                                 <td>{{ item.item }}</td>
-                                <td style="text-align: center; color: #1E40AF;">{{ item.por_unidade.get('CRAS I') if item.por_unidade and item.por_unidade.get('CRAS I') else '—' }}</td>
-                                <td style="text-align: center; color: #047857;">{{ item.por_unidade.get('CRAS II') if item.por_unidade and item.por_unidade.get('CRAS II') else '—' }}</td>
-                                <td style="text-align: center; color: #9F1239;">{{ item.por_unidade.get('CREAS') if item.por_unidade and item.por_unidade.get('CREAS') else '—' }}</td>
                                 <td style="text-align: center;"><strong>{{ item.quantidade }} {{ item.unidade_medida }}</strong></td>
+                                <td style="text-align: center;">{{ item.status }}</td>
                             </tr>
                             {% endfor %}
                         {% else %}
-                            <tr><td colspan="5" style="text-align: center; color: #64748B;">Nenhum insumo registrado na planilha.</td></tr>
+                            <tr><td colspan="3" style="text-align: center; color: #64748B;">Nenhum insumo registrado na planilha.</td></tr>
                         {% endif %}
                         <tr style="background: #F1F5F9; font-weight: 800; border-top: 2px solid #CBD5E1;">
                             <td>TOTAL DE INSUMOS EM RESERVA</td>
-                            <td style="text-align: center; color: #1E40AF;">{{ assistencia_social.estoque_totais.cras1 or 0 }}</td>
-                            <td style="text-align: center; color: #047857;">{{ assistencia_social.estoque_totais.cras2 or 0 }}</td>
-                            <td style="text-align: center; color: #9F1239;">{{ assistencia_social.estoque_totais.creas or 0 }}</td>
                             <td style="text-align: center; color: #0F172A; font-size: 1.05rem;"><strong>{{ assistencia_social.estoque_totais.consolidado or 0 }} itens</strong></td>
+                            <td style="text-align: center; color: #15803D;">Ativo</td>
                         </tr>
                     </tbody>
                 </table>

@@ -986,20 +986,14 @@ def fetch_google_drive_data(force=False):
         as_acoes = []
         as_estoque = []
         as_estoque_grupos = {
-            'consolidado': [],
-            'cras1': [],
-            'cras2': [],
-            'creas': []
+            'consolidado': []
         }
         as_estoque_totais = {
-            'consolidado': 0,
-            'cras1': 0,
-            'cras2': 0,
-            'creas': 0
+            'consolidado': 0
         }
         as_consolidado_map = {}
 
-        # Leitura da aba Ass_Estoque exclusivamente da planilha
+        # Leitura da aba Ass_Estoque exclusivamente da planilha (sempre Estoque Geral)
         sheet_as_es = get_sheet_name('Ass_Estoque', 'Assistencia_Estoque')
         if sheet_as_es:
             df_as_es = pd.read_excel(xl, sheet_as_es).fillna('')
@@ -1008,32 +1002,6 @@ def fetch_google_drive_data(force=False):
                 item = str(r_norm.get('item', '')).strip()
                 if not item:
                     continue
-
-                unidade_raw = str(r_norm.get('unidade') or r_norm.get('equipamento') or r_norm.get('cras') or r_norm.get('polo') or '').strip()
-                item_full_text = f"{item} {unidade_raw} {r_norm.get('cobertura_estimada', '')}".lower()
-
-                # Reconhecimento dinâmico de unidade por coluna ou identificação no item
-                status_words = ['adequado', 'atenção', 'atencao', 'crítico', 'critico', 'normal', 'alerta', 'concluído', 'concluido']
-                if any(k in item_full_text for k in ['cras 2', 'cras ii', 'cras2', 'polo 2', 'polo ii']):
-                    unidade_tag = 'CRAS II'
-                    grupo_chave = 'cras2'
-                elif any(k in item_full_text for k in ['creas']):
-                    unidade_tag = 'CREAS'
-                    grupo_chave = 'creas'
-                elif any(k in item_full_text for k in ['cras 1', 'cras i', 'cras1', 'polo 1', 'polo i']):
-                    unidade_tag = 'CRAS I'
-                    grupo_chave = 'cras1'
-                elif unidade_raw and unidade_raw.lower() not in status_words:
-                    unidade_tag = unidade_raw
-                    grupo_chave = 'cras1' if '1' in unidade_raw or 'i' in unidade_raw.lower() else ('cras2' if '2' in unidade_raw or 'ii' in unidade_raw.lower() else 'geral')
-                else:
-                    # Caso de preenchimento acidental de palavra de status no campo da unidade no Drive
-                    if item.lower() == 'cesta básica' and '73' in str(qtd_raw):
-                        unidade_tag = 'CRAS I'
-                        grupo_chave = 'cras1'
-                    else:
-                        unidade_tag = 'Consolidado / Geral'
-                        grupo_chave = 'geral'
 
                 try:
                     qtd_raw = str(r_norm.get('quantidade_atual') or r_norm.get('quantidade') or r_norm.get('qtd') or 0).replace(',', '.')
@@ -1055,11 +1023,15 @@ def fetch_google_drive_data(force=False):
                 else:
                     st_val = 'Adequado' if qtd_num >= 15 else ('Atenção' if qtd_num >= 5 else 'Crítico')
 
+                base_item_name = re.sub(r'\s*[-–(]\s*(CRAS\s*I{1,2}|CREAS).*$', '', item, flags=re.IGNORECASE).strip()
+                if not base_item_name:
+                    base_item_name = item
+
                 item_obj = {
-                    'nome': item,
-                    'item': item,
-                    'unidade': unidade_tag,
-                    'grupo': grupo_chave,
+                    'nome': base_item_name,
+                    'item': base_item_name,
+                    'unidade': 'Estoque Geral',
+                    'grupo': 'consolidado',
                     'quantidade': qtd_num,
                     'qtd': qtd_num,
                     'unidade_medida': unidade_medida,
@@ -1068,49 +1040,37 @@ def fetch_google_drive_data(force=False):
                 }
                 as_estoque.append(item_obj)
 
-                if grupo_chave in as_estoque_grupos:
-                    as_estoque_grupos[grupo_chave].append(item_obj)
-                    as_estoque_totais[grupo_chave] += qtd_num
-
-                # Mapeamento e consolidação geral de todos os itens reais da planilha
-                base_item_name = re.sub(r'\s*[-–(]\s*(CRAS\s*I{1,2}|CREAS).*$', '', item, flags=re.IGNORECASE).strip()
-                if not base_item_name:
-                    base_item_name = item
-
                 if base_item_name not in as_consolidado_map:
                     as_consolidado_map[base_item_name] = {
                         'nome': base_item_name,
                         'item': base_item_name,
-                        'unidade': 'Consolidado Geral',
+                        'unidade': 'Estoque Geral',
                         'grupo': 'consolidado',
                         'quantidade': 0,
                         'qtd': 0,
                         'unidade_medida': unidade_medida,
-                        'por_unidade': {},
-                        'status': st_val
+                        'cobertura': cobertura,
+                        'status_sheet': st_val if st_raw else ''
                     }
                 as_consolidado_map[base_item_name]['quantidade'] += qtd_num
                 as_consolidado_map[base_item_name]['qtd'] += qtd_num
-                unit_label = unidade_tag if unidade_tag != 'Consolidado / Geral' else 'Geral'
-                as_consolidado_map[base_item_name]['por_unidade'][unit_label] = as_consolidado_map[base_item_name]['por_unidade'].get(unit_label, 0) + qtd_num
+                if cobertura and not as_consolidado_map[base_item_name]['cobertura']:
+                    as_consolidado_map[base_item_name]['cobertura'] = cobertura
 
-        # Constrói itens consolidados com dados 100% da planilha
+        # Constrói itens do Estoque Geral com dados 100% da planilha
         for item_nome, c_data in as_consolidado_map.items():
-            breakdown_parts = [f"{u}: {q}" for u, q in c_data['por_unidade'].items() if q > 0]
-            breakdown = " · ".join(breakdown_parts) if breakdown_parts else ""
             q = c_data['quantidade']
-            st_calc = 'Adequado' if q >= 15 else ('Atenção' if q >= 5 else 'Crítico')
+            st_calc = c_data['status_sheet'] or ('Adequado' if q >= 15 else ('Atenção' if q >= 5 else 'Crítico'))
             c_item = {
                 'nome': item_nome,
                 'item': item_nome,
-                'unidade': 'Consolidado Geral',
+                'unidade': 'Estoque Geral',
                 'grupo': 'consolidado',
                 'quantidade': q,
                 'qtd': q,
                 'unidade_medida': c_data['unidade_medida'],
-                'cobertura': breakdown if breakdown else f"{q} {c_data['unidade_medida'].lower()}",
-                'status': st_calc,
-                'por_unidade': c_data['por_unidade']
+                'cobertura': c_data['cobertura'] or f"{q} {c_data['unidade_medida'].lower()}",
+                'status': st_calc
             }
             as_estoque_grupos['consolidado'].append(c_item)
             as_estoque_totais['consolidado'] += q

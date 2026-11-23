@@ -194,27 +194,11 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
-    // Estado global do Estoque da Assistência Social
-    window._as_estoque_grupos = null;
-    window._as_estoque_totais = null;
-
-    window.trocarAbaEstoque = function(unidade) {
-        const btnCons = document.getElementById('btn-as-est-consolidado');
-        const btnCras1 = document.getElementById('btn-as-est-cras1');
-        const btnCras2 = document.getElementById('btn-as-est-cras2');
-        const btnCreas = document.getElementById('btn-as-est-creas');
-
-        [btnCons, btnCras1, btnCras2, btnCreas].forEach(b => { if(b) b.classList.remove('active'); });
-
-        if (unidade === 'cras1' && btnCras1) btnCras1.classList.add('active');
-        else if (unidade === 'cras2' && btnCras2) btnCras2.classList.add('active');
-        else if (unidade === 'creas' && btnCreas) btnCreas.classList.add('active');
-        else if (btnCons) btnCons.classList.add('active');
-
+    // Renderização do Estoque Geral da Assistência Social
+    function renderEstoqueGeralCards(lista) {
         const grid = document.getElementById('as-estoque-cards-grid');
-        if (!grid || !window._as_estoque_grupos) return;
+        if (!grid) return;
 
-        const lista = window._as_estoque_grupos[unidade] || [];
         const badgeMap = {
             'Adequado': { bg: '#DCFCE7', color: '#15803D' },
             'Atenção':  { bg: '#FEF3C7', color: '#B45309' },
@@ -241,13 +225,10 @@ document.addEventListener("DOMContentLoaded", function() {
             return '📦';
         };
 
-        if (lista.length === 0) {
-            const nomesUnidade = { 'consolidado': 'Consolidado Geral', 'cras1': 'CRAS I', 'cras2': 'CRAS II', 'creas': 'CREAS' };
-            const uNome = nomesUnidade[unidade] || unidade;
+        if (!lista || lista.length === 0) {
             grid.innerHTML = `<div style="grid-column: 1 / -1; text-align: center; padding: 28px 16px; color: #64748B; background: #F8FAFC; border: 1px dashed #CBD5E1; border-radius: 10px;">
                 <div style="font-size: 1.6rem; margin-bottom: 6px;">📦</div>
-                <div style="font-weight: 700; color: #334155; font-size: 0.95rem;">Nenhum insumo específico registrado para ${uNome} na planilha do Google Drive.</div>
-                <div style="font-size: 0.8rem; margin-top: 4px; color: #94A3B8;">Os insumos gerais cadastrados estão visíveis na aba Consolidado Geral.</div>
+                <div style="font-weight: 700; color: #334155; font-size: 0.95rem;">Nenhum insumo registrado na planilha do Google Drive.</div>
             </div>`;
             return;
         }
@@ -256,9 +237,6 @@ document.addEventListener("DOMContentLoaded", function() {
             const bInfo = badgeMap[item.status] || { bg: '#F1F5F9', color: '#475569' };
             const icon = getIcon(item.nome || item.item);
             const qtdVal = item.quantidade !== undefined ? item.quantidade : item.qtd;
-            const breakdownHtml = item.cobertura
-                ? `<div style="margin-top: 8px; font-size: 0.73rem; color: #475569; background: #F8FAFC; padding: 5px 8px; border-radius: 6px; border-left: 3px solid #94A3B8;">${item.cobertura}</div>`
-                : '';
 
             return `
             <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 10px; padding: 14px 16px; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.2s; box-shadow: 0 2px 6px rgba(0,0,0,0.02);">
@@ -268,18 +246,17 @@ document.addEventListener("DOMContentLoaded", function() {
                         <span style="font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 6px; background: ${bInfo.bg}; color: ${bInfo.color};">${item.status}</span>
                     </div>
                     <div style="font-weight: 700; color: #1E293B; font-size: 0.95rem; line-height: 1.25;">${item.nome || item.item}</div>
-                    <div style="font-size: 0.74rem; color: #64748B; margin-top: 2px;">${item.unidade || 'Unidade Geral'}</div>
+                    <div style="font-size: 0.74rem; color: #64748B; margin-top: 2px;">Estoque Geral</div>
                 </div>
                 <div style="margin-top: 12px;">
                     <div style="font-size: 1.7rem; font-weight: 800; color: #0F172A; line-height: 1;">
                         ${qtdVal}
                         <span style="font-size: 0.78rem; font-weight: 600; color: #64748B;">${item.unidade_medida || 'unid.'}</span>
                     </div>
-                    ${breakdownHtml}
                 </div>
             </div>`;
         }).join('');
-    };
+    }
 
     function renderAssistenciaSocial(d) {
         if (!d) return;
@@ -320,98 +297,44 @@ document.addEventListener("DOMContentLoaded", function() {
             setVal('as-pessoas-rua', d.kpis.pessoas_rua);
         }
 
-        // Totais de Estoque
-        if (d.estoque_totais) {
-            const setVal = (id, val) => {
-                const el = document.getElementById(id);
-                if (el) el.innerText = (val !== undefined && val !== null ? val : 0).toLocaleString('pt-BR');
+        // Total de Estoque Geral
+        const totGeral = d.estoque_totais?.consolidado || 0;
+        const elBadgeTot = document.getElementById('as-estoque-total-badge');
+        if (elBadgeTot) elBadgeTot.innerText = `${totGeral.toLocaleString('pt-BR')} itens`;
+
+        // Renderizar Cards e Tabela do Estoque Geral
+        const listaGeral = d.estoque_consolidado || d.estoque_grupos?.consolidado || [];
+        renderEstoqueGeralCards(listaGeral);
+
+        const matrizTbody = document.getElementById('as-estoque-matriz-tbody');
+        if (matrizTbody) {
+            const badgeMap = {
+                'Adequado': '<span class="badge-concluido">Adequado</span>',
+                'Atenção':  '<span class="badge-andamento">Atenção</span>',
+                'Crítico':  '<span class="badge-construcao">Crítico</span>'
             };
-            setVal('as-cras1-estoque-qtd', d.estoque_totais.cras1);
-            setVal('as-cras2-estoque-qtd', d.estoque_totais.cras2);
-            setVal('as-creas-estoque-qtd', d.estoque_totais.creas);
 
-            setVal('as-pill-tot-consolidado', d.estoque_totais.consolidado);
-            setVal('as-pill-tot-cras1', d.estoque_totais.cras1);
-            setVal('as-pill-tot-cras2', d.estoque_totais.cras2);
-            setVal('as-pill-tot-creas', d.estoque_totais.creas);
-
-            const elBadgeTot = document.getElementById('as-estoque-total-badge');
-            if (elBadgeTot) elBadgeTot.innerText = `${(d.estoque_totais.consolidado || 0).toLocaleString('pt-BR')} itens`;
-        }
-
-        // Armazenar grupos de estoque e acionar renderização interativa
-        if (d.estoque_grupos) {
-            window._as_estoque_grupos = d.estoque_grupos;
-            window.trocarAbaEstoque('consolidado');
-
-            // Renderizar Matriz Comparativa Lado a Lado
-            const matrizTbody = document.getElementById('as-estoque-matriz-tbody');
-            if (matrizTbody) {
-                const cMap = {};
-                (d.estoque_grupos.consolidado || []).forEach(it => {
-                    const k = it.item || it.nome;
-                    cMap[k] = {
-                        item: k,
-                        cras1: 0,
-                        cras2: 0,
-                        creas: 0,
-                        total: it.quantidade !== undefined ? it.quantidade : it.qtd,
-                        status: it.status || 'Adequado'
-                    };
-                });
-                (d.estoque_grupos.cras1 || []).forEach(it => {
-                    const k = it.item || it.nome;
-                    if (!cMap[k]) cMap[k] = { item: k, cras1: 0, cras2: 0, creas: 0, total: 0, status: it.status };
-                    cMap[k].cras1 = it.quantidade !== undefined ? it.quantidade : it.qtd;
-                });
-                (d.estoque_grupos.cras2 || []).forEach(it => {
-                    const k = it.item || it.nome;
-                    if (!cMap[k]) cMap[k] = { item: k, cras1: 0, cras2: 0, creas: 0, total: 0, status: it.status };
-                    cMap[k].cras2 = it.quantidade !== undefined ? it.quantidade : it.qtd;
-                });
-                (d.estoque_grupos.creas || []).forEach(it => {
-                    const k = it.item || it.nome;
-                    if (!cMap[k]) cMap[k] = { item: k, cras1: 0, cras2: 0, creas: 0, total: 0, status: it.status };
-                    cMap[k].creas = it.quantidade !== undefined ? it.quantidade : it.qtd;
-                });
-
-                const badgeMap = {
-                    'Adequado': '<span class="badge-concluido">Adequado</span>',
-                    'Atenção':  '<span class="badge-andamento">Atenção</span>',
-                    'Crítico':  '<span class="badge-construcao">Crítico</span>'
-                };
-
-                let rowsHtml = '';
-                Object.values(cMap).forEach(row => {
-                    rowsHtml += `
-                    <tr>
-                        <td style="font-weight: 600; color: #1E293B;">${row.item}</td>
-                        <td style="text-align: center; color: #1E40AF; font-weight: 700;">${row.cras1 > 0 ? row.cras1 : '—'}</td>
-                        <td style="text-align: center; color: #047857; font-weight: 700;">${row.cras2 > 0 ? row.cras2 : '—'}</td>
-                        <td style="text-align: center; color: #9F1239; font-weight: 700;">${row.creas > 0 ? row.creas : '—'}</td>
-                        <td style="text-align: center; font-weight: 800; background: #F8FAFC; color: #0F172A; font-size: 0.95rem;">${row.total}</td>
-                        <td style="text-align: center;">${badgeMap[row.status] || '<span class="badge-andamento">' + row.status + '</span>'}</td>
-                    </tr>`;
-                });
-
-                // Linha de Totalizador Geral
-                const totCras1 = d.estoque_totais?.cras1 || 0;
-                const totCras2 = d.estoque_totais?.cras2 || 0;
-                const totCreas = d.estoque_totais?.creas || 0;
-                const totGeral = d.estoque_totais?.consolidado || 0;
-
+            let rowsHtml = '';
+            listaGeral.forEach(it => {
+                const nomeItem = it.item || it.nome;
+                const qtdItem = it.quantidade !== undefined ? it.quantidade : it.qtd;
+                const statusItem = it.status || 'Adequado';
                 rowsHtml += `
-                <tr style="background: #F1F5F9; font-weight: 800; border-top: 2px solid #CBD5E1;">
-                    <td style="color: #0F172A; font-weight: 800;">TOTAL GERAL DE INSUMOS</td>
-                    <td style="text-align: center; color: #1E40AF; font-size: 0.95rem;">${totCras1}</td>
-                    <td style="text-align: center; color: #047857; font-size: 0.95rem;">${totCras2}</td>
-                    <td style="text-align: center; color: #9F1239; font-size: 0.95rem;">${totCreas}</td>
-                    <td style="text-align: center; color: #0F172A; background: #E2E8F0; font-size: 1.05rem;">${totGeral}</td>
-                    <td style="text-align: center; color: #15803D;">✅ Ativo</td>
+                <tr>
+                    <td style="font-weight: 600; color: #1E293B;">${nomeItem}</td>
+                    <td style="text-align: center; font-weight: 800; background: #F8FAFC; color: #0F172A; font-size: 0.95rem;">${qtdItem}</td>
+                    <td style="text-align: center;">${badgeMap[statusItem] || '<span class="badge-andamento">' + statusItem + '</span>'}</td>
                 </tr>`;
+            });
 
-                matrizTbody.innerHTML = rowsHtml;
-            }
+            rowsHtml += `
+            <tr style="background: #F1F5F9; font-weight: 800; border-top: 2px solid #CBD5E1;">
+                <td style="color: #0F172A; font-weight: 800;">TOTAL GERAL DE INSUMOS</td>
+                <td style="text-align: center; color: #0F172A; background: #E2E8F0; font-size: 1.05rem;">${totGeral}</td>
+                <td style="text-align: center; color: #15803D;">✅ Ativo</td>
+            </tr>`;
+
+            matrizTbody.innerHTML = rowsHtml;
         }
 
         // Tabela de ações
